@@ -598,6 +598,7 @@ canvas { max-width: 100%; }
 <!-- NAV -->
 <nav class="nav">
   <span class="nav-title">MVP Report</span><span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:#c0392b;background:rgba(192,57,43,0.15);padding:3px 10px;border-radius:3px;border:1px solid rgba(192,57,43,0.3);">SAMPLE · OBFUSCATED</span>
+  <a href="#p0">Brief</a>
   <a href="#p1">Cover</a>
   <a href="#p2">Disclaimer</a>
   <a href="#p3">Overview</a>
@@ -630,6 +631,182 @@ canvas { max-width: 100%; }
 </div>
 
 <div class="report-wrap">
+
+
+<!-- ══════════════════════════════════════════════
+     PAGE 0 — PROJECT BRIEF
+════════════════════════════════════════════════ -->
+<div class="page" id="p0">
+<style>
+.brief-wrap {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 640px;
+  background: #fafbfc;
+}
+.brief-body {
+  padding: 56px 64px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.brief-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.brief-badge {
+  font-size: 9px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase;
+  background: rgba(244,166,35,0.12);
+  border: 1px solid rgba(244,166,35,0.35);
+  color: #b07a10;
+  padding: 4px 12px; border-radius: 20px;
+}
+.brief-stage {
+  font-size: 9px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8896a6;
+}
+.brief-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 34px; line-height: 1.2;
+  color: #0d1b3e;
+  max-width: 580px;
+}
+.brief-title em {
+  font-style: italic;
+  color: #163472;
+}
+.brief-hook {
+  font-size: 14px; line-height: 1.85;
+  color: #4a5568;
+  max-width: 620px;
+  border-left: 3px solid #f4a623;
+  padding-left: 20px;
+}
+.brief-hook strong { color: #0d1b3e; }
+.brief-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  max-width: 720px;
+}
+.brief-block {
+  background: white;
+  border: 1px solid #e4eaf2;
+  border-radius: 10px;
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.brief-block::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: linear-gradient(90deg, #f4a623, #e8832a);
+}
+.brief-block-icon { font-size: 18px; margin-bottom: 8px; }
+.brief-block-title {
+  font-size: 11px; font-weight: 700;
+  color: #0d1b3e; margin-bottom: 5px;
+}
+.brief-block-text {
+  font-size: 10.5px; line-height: 1.65;
+  color: #6b7a90;
+}
+.brief-ask {
+  background: #0d1b3e;
+  border-radius: 10px;
+  padding: 20px 28px;
+  display: flex; align-items: center;
+  gap: 28px;
+  max-width: 720px;
+}
+.brief-ask-label {
+  font-size: 9px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(244,166,35,0.8);
+  white-space: nowrap; flex-shrink: 0;
+}
+.brief-ask-items {
+  display: flex; gap: 24px; flex-wrap: wrap;
+}
+.brief-ask-item {
+  font-size: 11px; color: rgba(255,255,255,0.65);
+  display: flex; align-items: center; gap: 7px;
+}
+.brief-ask-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: #f4a623; flex-shrink: 0;
+}
+.brief-footer {
+  padding: 16px 64px;
+  background: white;
+  border-top: 1px solid #e4eaf2;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.brief-footer-note { font-size: 10px; color: #9aa5b4; }
+.brief-footer-badge {
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #163472; opacity: 0.5;
+}
+</style>
+  <div class="brief-wrap">
+    <div class="brief-body">
+
+      <div>
+        <div class="brief-eyebrow">
+          <span class="brief-badge">BETA · Q1 2026</span>
+          <span class="brief-stage">Early Access · Review Copy</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="brief-title">
+          Institutional intelligence,<br><em>made accessible.</em>
+        </div>
+      </div>
+
+      <div class="brief-hook">
+        Every quarter, institutional investors disclose billions in equity positions through
+        <strong>SEC 13F filings</strong> — yet this data remains fragmented, raw, and inaccessible
+        to most market participants. This platform democratises institutional intelligence —
+        turning complex regulatory filings into <strong>clear, visual insights</strong> for anyone
+        curious about where smart money moves.
+      </div>
+
+      <div class="brief-grid">
+        <div class="brief-block">
+          <div class="brief-block-icon">📂</div>
+          <div class="brief-block-title">The Source</div>
+          <div class="brief-block-text">SEC Form 13F — mandatory quarterly disclosures by institutional investors managing over $100M in assets.</div>
+        </div>
+        <div class="brief-block">
+          <div class="brief-block-icon">⚙️</div>
+          <div class="brief-block-title">What We Do</div>
+          <div class="brief-block-text">We parse, structure and visualise 13F data into reports that reveal sector flows, conviction levels and portfolio shifts.</div>
+        </div>
+        <div class="brief-block">
+          <div class="brief-block-icon">👤</div>
+          <div class="brief-block-title">Who It's For</div>
+          <div class="brief-block-text">Anyone curious about institutional capital — from first-time investors to seasoned analysts and fund managers.</div>
+        </div>
+      </div>
+
+      <div class="brief-ask">
+        <div class="brief-ask-label">We ask you to</div>
+        <div class="brief-ask-items">
+          <div class="brief-ask-item"><span class="brief-ask-dot"></span>Navigate as a real user would</div>
+          <div class="brief-ask-item"><span class="brief-ask-dot"></span>Note anything unclear or missing</div>
+          <div class="brief-ask-item"><span class="brief-ask-dot"></span>Share your impressions on the last page</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="brief-footer">
+      <span class="brief-footer-note">Beta version · Data as of June 30, 2025 · For review purposes only — not for redistribution</span>
+      <span class="brief-footer-badge">Project Brief · Page 0</span>
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════════════
      PAGE 1 — COVER (preserved from provided HTML)
@@ -677,7 +854,7 @@ canvas { max-width: 100%; }
 <div class="page" id="p2">
   <div class="page-header">
     <div class="ph-left"><div class="ph-eyebrow">Legal Notice</div><div class="ph-title">Disclaimer</div></div>
-    <div class="ph-right"><div class="ph-page-num">02 / 08</div></div>
+    <div class="ph-right"><div class="ph-page-num">02 / 09</div></div>
   </div>
   <div class="disclaimer-body">
     <div class="disc-icon">⚖️</div>
@@ -703,7 +880,7 @@ canvas { max-width: 100%; }
       <div class="ph-title">Investment Landscape — Fire, Marine & Casualty Insurance</div>
       <div class="ph-sub">Q2 2025 · 13F Filings · Data as of June 30, 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">03 / 08</div></div>
+    <div class="ph-right"><div class="ph-page-num">03 / 09</div></div>
   </div>
   <div class="page-body">
 
@@ -776,7 +953,7 @@ canvas { max-width: 100%; }
       <div class="ph-title">Institution List</div>
       <div class="ph-sub">Fire, Marine & Casualty Insurance · All Active Institutional Investors · Q2 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">04 / 08</div></div>
+    <div class="ph-right"><div class="ph-page-num">04 / 09</div></div>
   </div>
   <div class="page-body">
     <div class="inst-grid">
@@ -922,7 +1099,7 @@ canvas { max-width: 100%; }
       <div class="ph-title">Institution Alpha</div>
       <div class="ph-sub">CIK: [REDACTED] · Fire, Marine & Casualty Insurance · as of June 30, 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">05 / 08</div></div>
+    <div class="ph-right"><div class="ph-page-num">05 / 09</div></div>
   </div>
   <div class="page-body">
 
@@ -1011,7 +1188,7 @@ canvas { max-width: 100%; }
       <div class="ph-title">Institution Investments List</div>
       <div class="ph-sub">Institution Zeta · CIK: [REDACTED] · as of June 30, 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">06 / 08</div></div>
+    <div class="ph-right"><div class="ph-page-num">06 / 09</div></div>
   </div>
   <div class="page-body">
     <table class="data-table">
@@ -1163,7 +1340,7 @@ canvas { max-width: 100%; }
       <div class="ph-title">Portfolio Change vs Last Quarter</div>
       <div class="ph-sub">Institution Alpha · Q1 2025 → Q2 2025 · as of June 30, 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">07 / 08</div></div>
+    <div class="ph-right"><div class="ph-page-num">07 / 09</div></div>
   </div>
   <div class="page-body">
 
@@ -1274,7 +1451,7 @@ canvas { max-width: 100%; }
       <div class="ph-title">Company L (DEO)</div>
       <div class="ph-sub">Consumer Defensive · Beverages — Wineries & Distilleries · United Kingdom</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">08 / 08</div></div>
+    <div class="ph-right"><div class="ph-page-num">08 / 09</div></div>
   </div>
   <div class="page-body">
 
