@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>[SAMPLE – FULL OBFUSCATION] Investment Landscape</title>
+<title>[SAMPLE] Investment Landscape — Fire, Marine & Casualty Insurance</title>
 
 <style>
 /* ── WATERMARK ── */
 body::before {
-  content: 'SAMPLE · TEST USE ONLY · T-2026-FULL-002';
+  content: 'SAMPLE · TEST USE ONLY · T-2026-PARTIAL-001';
   position: fixed;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%) rotate(-35deg);
@@ -83,13 +83,489 @@ body::after {
   body::before { color: rgba(13,27,62,0.15) !important; font-size: 40px !important; }
   #expiry-banner { display: none; }
 }
+
+/* SNIPPET 1 */
+
+  body { background:#f5f7fa; padding:32px; font-family:'DM Sans',sans-serif; }
+
+  /* ── EXPLAINER BLOCK ── */
+  .explainer-wrap {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #e8edf4;
+  }
+  .explainer-label {
+    font-size: 9px; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: #f4a623;
+    margin-bottom: 12px;
+  }
+  .explainer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .explainer-card {
+    background: #0d1b3e;
+    border-radius: 10px;
+    padding: 18px 20px;
+    border-left: 3px solid #f4a623;
+    position: relative;
+    overflow: hidden;
+  }
+  .explainer-card::after {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(244,166,35,0.05);
+  }
+  .ec-icon {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .ec-title {
+    font-size: 12px; font-weight: 700;
+    color: white;
+    margin-bottom: 7px;
+  }
+  .ec-text {
+    font-size: 11px; line-height: 1.7;
+    color: rgba(255,255,255,0.55);
+  }
+  .ec-text strong {
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+  }
+
+/* SNIPPET 2 */
+
+body { background:#f5f7fa; padding:0; font-family:'DM Sans',sans-serif; margin:0; }
+:root {
+  --navy:#0d1b3e; --navy-mid:#163472; --gold:#f4a623;
+  --buy:#0f8a5f; --buy-bg:#eaf6f1;
+  --sell:#c0392b; --sell-bg:#fdf0ef;
+  --border:#e4eaf2; --bg:#f5f7fa; --muted:#8896a6; --text:#1a2433;
+}
+
+/* PAGE HEADER */
+.page-header {
+  background: linear-gradient(135deg,#0d1b3e 0%,#163472 100%);
+  padding:22px 48px 18px;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  position:relative;
+}
+.page-header::after {
+  content:''; position:absolute; bottom:0; left:0;
+  width:100%; height:3px;
+  background:linear-gradient(90deg,#f4a623,#e8832a);
+}
+.ph-eyebrow { font-size:8.5px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#f4a623; margin-bottom:5px; }
+.ph-title { font-family:'DM Serif Display',serif; font-size:20px; color:white; }
+.ph-sub { font-size:11px; color:rgba(255,255,255,0.5); margin-top:3px; }
+.ph-page-num { font-family:'DM Mono',monospace; font-size:11px; color:rgba(255,255,255,0.3); }
+
+.page-body { padding:32px 48px 40px; background:white; }
+
+/* SECTOR FILTER BUTTONS */
+.sector-filters {
+  display:flex; flex-wrap:wrap; gap:7px;
+  margin-bottom:20px;
+}
+.sf-btn {
+  font-size:10px; font-weight:600;
+  padding:5px 13px; border-radius:20px;
+  background:var(--bg);
+  border:1px solid var(--border);
+  color:var(--muted); cursor:pointer;
+  transition:all .18s;
+  display:flex; align-items:center; gap:5px;
+}
+.sf-btn:hover { border-color:#b0bfcf; color:var(--text); }
+.sf-btn.active {
+  background:var(--navy); color:white;
+  border-color:var(--navy);
+}
+.sf-dot { width:6px; height:6px; border-radius:50%; }
+
+/* TABLE SECTION */
+.table-section { margin-bottom:32px; }
+.table-head-bar {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 14px; border-radius:8px 8px 0 0;
+}
+.table-head-bar.buy { background:var(--buy-bg); border-left:3px solid var(--buy); }
+.table-head-bar.sell { background:var(--sell-bg); border-left:3px solid var(--sell); }
+.thb-title { font-size:12px; font-weight:700; }
+.table-head-bar.buy .thb-title { color:var(--buy); }
+.table-head-bar.sell .thb-title { color:var(--sell); }
+.thb-sub { font-size:10.5px; color:var(--muted); }
+.thb-count {
+  font-family:'DM Mono',monospace; font-size:11px; font-weight:500;
+  padding:4px 12px; border-radius:20px;
+}
+.table-head-bar.buy .thb-count { background:rgba(15,138,95,0.12); color:var(--buy); }
+.table-head-bar.sell .thb-count { background:rgba(192,57,43,0.1); color:var(--sell); }
+
+/* DATA TABLE */
+.data-table { width:100%; border-collapse:collapse; font-size:11.5px; }
+.data-table thead th {
+  font-size:8.5px; font-weight:700; letter-spacing:1.2px;
+  text-transform:uppercase; color:white;
+  background:var(--navy-mid); padding:9px 12px; text-align:left;
+}
+.data-table thead th:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) { text-align:right; }
+.data-table tbody tr { border-bottom:1px solid var(--border); transition:background .15s; }
+.data-table tbody tr:nth-child(even) { background:var(--bg); }
+.data-table tbody tr:hover { background:#eef3fa; }
+.data-table td { padding:10px 12px; vertical-align:middle; }
+.data-table td:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) { text-align:right; }
+
+.rank { font-family:'DM Mono',monospace; font-size:10px; color:var(--muted); font-weight:500; }
+.rank.top3 { color:var(--gold); font-weight:700; }
+.ticker {
+  font-family:'DM Mono',monospace; font-size:10px; font-weight:500;
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:4px; padding:2px 6px; display:inline-block;
+  color:var(--navy-mid);
+}
+.cell-name { font-weight:600; font-size:12px; color:var(--text); }
+.cell-sub { font-size:10px; color:var(--muted); margin-top:1px; }
+.mono { font-family:'DM Mono',monospace; font-size:11px; }
+.inst-count {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:22px; height:22px; border-radius:50%;
+  background:var(--navy); color:white;
+  font-size:10px; font-weight:700; font-family:'DM Mono',monospace;
+}
+.pos { color:var(--buy); font-weight:600; }
+.neg { color:var(--sell); font-weight:600; }
+.change-cell { display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
+.change-num { font-family:'DM Mono',monospace; font-size:11px; font-weight:600; }
+.change-pct {
+  font-size:9.5px; font-weight:700; font-family:'DM Mono',monospace;
+  padding:1px 6px; border-radius:10px;
+}
+.change-pct.pos { background:var(--buy-bg); color:var(--buy); }
+.change-pct.neg { background:var(--sell-bg); color:var(--sell); }
+
+/* HIDDEN ROW */
+.sector-row { display:table-row; }
+.sector-row.hidden { display:none; }
+
+/* PAGE FOOTER */
+.page-footer {
+  padding:14px 48px; background:var(--bg);
+  border-top:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.pf-note { font-size:9.5px; color:var(--muted); font-style:italic; }
+.pf-badge { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--navy-mid); opacity:.5; }
+
+/* SNIPPET 3 */
+
+body { background:#f5f7fa; padding:32px; font-family:'DM Sans',sans-serif; margin:0; }
+:root { --navy:#0d1b3e; --gold:#f4a623; --border:#e4eaf2; --muted:#8896a6; }
+
+/* ── PLATFORM SUMMARY ── */
+.platform-wrap {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.platform-label {
+  font-size: 9px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 14px;
+}
+.platform-inner {
+  background: linear-gradient(135deg, #0d1b3e 0%, #163472 100%);
+  border-radius: 12px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle decorative ring */
+.platform-inner::after {
+  content: '';
+  position: absolute;
+  right: -60px; bottom: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  border: 40px solid rgba(244,166,35,0.05);
+  pointer-events: none;
+}
+
+/* Left — headline + description */
+.pl-left {}
+.pl-tag {
+  font-size: 8.5px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 10px;
+}
+.pl-headline {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px; color: white; line-height: 1.35;
+  margin-bottom: 12px;
+}
+.pl-desc {
+  font-size: 11.5px; line-height: 1.8;
+  color: rgba(255,255,255,0.55);
+  max-width: 380px;
+}
+.pl-desc strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+/* Right — benefit list */
+.pl-right {}
+.pl-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pl-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.2s;
+}
+.pl-benefit:hover { background: rgba(255,255,255,0.07); }
+.pl-benefit-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.pl-benefit-text {}
+.pl-benefit-title {
+  font-size: 11.5px; font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 2px;
+}
+.pl-benefit-sub {
+  font-size: 10.5px; line-height: 1.55;
+  color: rgba(255,255,255,0.42);
+}
+
+/* SNIPPET 4 */
+
+body { background:#f5f7fa; padding:0; font-family:'DM Sans',sans-serif; margin:0; }
+:root {
+  --navy:#0d1b3e; --navy-mid:#163472; --gold:#f4a623;
+  --buy:#0f8a5f; --buy-bg:#eaf6f1;
+  --sell:#c0392b; --sell-bg:#fdf0ef;
+  --border:#e4eaf2; --bg:#f5f7fa;
+  --muted:#8896a6; --text:#1a2433; --soft:#4a5568;
+}
+
+/* PAGE HEADER */
+.page-header {
+  background:linear-gradient(135deg,#0d1b3e 0%,#163472 100%);
+  padding:22px 48px 18px;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  position:relative;
+}
+.page-header::after {
+  content:''; position:absolute; bottom:0; left:0;
+  width:100%; height:3px;
+  background:linear-gradient(90deg,#f4a623,#e8832a);
+}
+.ph-eyebrow { font-size:8.5px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:#f4a623; margin-bottom:5px; }
+.ph-title { font-family:'DM Serif Display',serif; font-size:20px; color:white; }
+.ph-sub { font-size:11px; color:rgba(255,255,255,0.5); margin-top:3px; }
+.ph-right { text-align:right; }
+.ph-page-num { font-family:'DM Mono',monospace; font-size:11px; color:rgba(255,255,255,0.3); }
+
+.page-body { padding:28px 48px 36px; background:white; }
+
+/* ── FILTER PANEL ── */
+.filter-panel {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 24px;
+}
+.filter-panel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.fp-title {
+  font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--navy-mid);
+}
+.fp-reset {
+  font-size: 10px; font-weight: 600; color: var(--muted);
+  cursor: pointer; background: none; border: none;
+  font-family: 'DM Sans', sans-serif;
+  transition: color 0.2s;
+}
+.fp-reset:hover { color: var(--sell); }
+
+.filter-rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px 20px;
+}
+
+/* Filter group */
+.fg { display: flex; flex-direction: column; gap: 6px; }
+.fg-label {
+  font-size: 8.5px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* Pills for categorical filters */
+.pill-group { display: flex; flex-wrap: wrap; gap: 5px; }
+.pill {
+  font-size: 10px; font-weight: 500;
+  padding: 4px 11px; border-radius: 14px;
+  background: white; border: 1px solid var(--border);
+  color: var(--soft); cursor: pointer;
+  transition: all 0.15s; user-select: none;
+}
+.pill:hover { border-color: #b0bfcf; color: var(--text); }
+.pill.active {
+  background: var(--navy); border-color: var(--navy);
+  color: white; font-weight: 600;
+}
+
+/* Dropdown for range filters */
+.range-select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px; font-weight: 500;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: white;
+  color: var(--text);
+  cursor: pointer;
+  width: 100%;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238896a6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+  transition: border-color 0.15s;
+}
+.range-select:focus { outline: none; border-color: var(--navy-mid); }
+.range-select.active { border-color: var(--navy-mid); color: var(--navy); font-weight: 600; }
+
+/* Results summary bar */
+.results-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.rb-count {
+  font-size: 11px; font-weight: 600; color: var(--soft);
+}
+.rb-count strong { color: var(--navy); }
+.rb-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.rb-tag {
+  font-size: 9.5px; font-weight: 600;
+  padding: 3px 9px; border-radius: 10px;
+  background: rgba(22,52,114,0.08);
+  color: var(--navy-mid);
+  display: flex; align-items: center; gap: 5px;
+}
+.rb-tag-x {
+  cursor: pointer; color: var(--muted);
+  font-size: 11px; line-height: 1;
+  transition: color 0.15s;
+}
+.rb-tag-x:hover { color: var(--sell); }
+
+/* ── DATA TABLE ── */
+.data-table { width:100%; border-collapse:collapse; font-size:11px; }
+.data-table thead th {
+  font-size:8.5px; font-weight:700; letter-spacing:1.2px;
+  text-transform:uppercase; color:white;
+  background:var(--navy-mid); padding:9px 12px; text-align:left;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+.data-table thead th.sortable:hover { background: #1a4a8a; }
+.data-table thead th .sort-arrow { margin-left:4px; opacity:0.4; font-size:9px; }
+.data-table thead th.sort-asc .sort-arrow::after { content:'↑'; opacity:1; }
+.data-table thead th.sort-desc .sort-arrow::after { content:'↓'; opacity:1; }
+.data-table thead th:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) { text-align:right; }
+.data-table tbody tr { border-bottom:1px solid var(--border); transition:background .12s; }
+.data-table tbody tr:nth-child(even) { background:var(--bg); }
+.data-table tbody tr:hover { background:#eef3fa; }
+.data-table tbody tr.hidden { display:none; }
+.data-table td { padding:9px 12px; vertical-align:middle; }
+.data-table td:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) { text-align:right; }
+
+.ticker {
+  font-family:'DM Mono',monospace; font-size:10px; font-weight:500;
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:4px; padding:2px 6px;
+  color:var(--navy-mid);
+}
+.cell-name { font-weight:600; font-size:11.5px; color:var(--text); }
+.cell-sub { font-size:9.5px; color:var(--muted); margin-top:1px; }
+.mono { font-family:'DM Mono',monospace; font-size:11px; }
+.pos { color:var(--buy); font-weight:600; }
+.neg { color:var(--sell); font-weight:600; }
+.badge-cap {
+  font-size:8.5px; font-weight:700; padding:2px 8px;
+  border-radius:10px; display:inline-block; white-space:nowrap;
+}
+.cap-large { background:#edf3fd; color:#1d60b5; }
+.cap-mid   { background:#eaf6f1; color:#0f8a5f; }
+.cap-small { background:#fdf6e8; color:#b07a10; }
+
+.inst-bar {
+  display: flex; align-items: center; gap: 7px;
+}
+.inst-bar-track {
+  flex: 1; height: 4px; background: var(--border);
+  border-radius: 2px; overflow: hidden;
+  max-width: 60px;
+}
+.inst-bar-fill {
+  height: 100%; border-radius: 2px;
+  background: var(--navy-mid);
+}
+.inst-bar-num {
+  font-family:'DM Mono',monospace; font-size:10.5px;
+  color: var(--text); font-weight:500;
+}
+
+.no-results {
+  text-align: center; padding: 48px 0;
+  color: var(--muted); font-size: 12px; font-style: italic;
+  display: none;
+}
+
+/* PAGE FOOTER */
+.page-footer {
+  padding:14px 48px; background:var(--bg);
+  border-top:1px solid var(--border);
+  display:flex; justify-content:space-between; align-items:center;
+}
+.pf-note { font-size:9.5px; color:var(--muted); font-style:italic; }
+.pf-badge { font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--navy-mid); opacity:.5; }
+
 </style>
 
 <script>
 // ── EXPIRY CHECK ──
 (function() {
   const EXPIRY = new Date('2026-03-15T23:59:59');
-  const TESTER_ID = 'T-2026-FULL-002';
+  const TESTER_ID = 'T-2026-PARTIAL-001';
   const now = new Date();
   const daysLeft = Math.ceil((EXPIRY - now) / (1000*60*60*24));
 
@@ -128,7 +604,7 @@ body::after {
 
   // Console warning
   console.log('%c⚠ CONFIDENTIAL TEST DOCUMENT', 'color:#f4a623;font-size:18px;font-weight:bold;');
-  console.log('%cTester ID: T-2026-FULL-002 | Expires: 2026-03-15', 'color:#8896a6;font-size:12px;');
+  console.log('%cTester ID: T-2026-PARTIAL-001 | Expires: 2026-03-15', 'color:#8896a6;font-size:12px;');
   console.log('%cUnauthorised distribution is prohibited.', 'color:#c0392b;font-size:12px;');
 })();
 </script>
@@ -597,18 +1073,18 @@ canvas { max-width: 100%; }
 
 <!-- NAV -->
 <nav class="nav">
-  <span class="nav-title">MVP Report</span><span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:#c0392b;background:rgba(192,57,43,0.15);padding:3px 10px;border-radius:3px;border:1px solid rgba(192,57,43,0.3);">SAMPLE · OBFUSCATED</span>
+  <span class="nav-title">MVP Report</span><span style="font-size:9px;font-weight:700;letter-spacing:1.5px;color:#f4a623;background:rgba(244,166,35,0.15);padding:3px 10px;border-radius:3px;border:1px solid rgba(244,166,35,0.3);">SAMPLE · PARTIAL DATA</span>
   <a href="#p0">Brief</a>
   <a href="#p1">Cover</a>
   <a href="#p2">Disclaimer</a>
   <a href="#p3">Overview</a>
-  <a href="#p4">Institutions</a>
+  <a href="#p4">Activity</a><a href="#p4b">Institutions</a>
   <a href="#p5">Portfolio</a>
   <a href="#p6">Investments</a>
   <a href="#p7">Changes</a>
   <a href="#p8">Company</a>
   <a href="https://forms.gle/UAJg6rJCsTWdBSt19" target="_blank" style="margin-left:auto;background:linear-gradient(135deg,#f4a623,#e8832a);color:#0d1b3e;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-decoration:none;padding:6px 16px;border-radius:20px;display:flex;align-items:center;gap:6px;transition:opacity 0.2s;white-space:nowrap;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">&#9998; Leave Feedback</a>
-  <a href="#p9">Feedback</a>
+  <a href="#p-screener">Screener</a><a href="#p9">Feedback</a>
 </nav>
 
 
@@ -625,7 +1101,7 @@ canvas { max-width: 100%; }
 <div id="expiry-banner">
   <div>
     <div class="eb-left">CONFIDENTIAL TEST DOCUMENT · NOT FOR DISTRIBUTION</div>
-    <div class="eb-id">TESTER ID: T-2026-FULL-002 · 2026-03-15</div>
+    <div class="eb-id">TESTER ID: T-2026-001 · 2026-03-15</div>
   </div>
   <div id="eb-countdown" class="eb-right">Checking expiry...</div>
 </div>
@@ -828,6 +1304,94 @@ canvas { max-width: 100%; }
       <div class="cover-section-label">About This Report</div>
       <p>This report provides a comprehensive overview of <strong>institutional investment activity</strong> within the <strong>Fire, Marine & Casualty Insurance</strong> industry. It covers equity portfolios disclosed by institutional investors through their <strong>SEC 13F filings</strong> for the period ending <strong>June 30, 2025</strong>, offering a detailed picture of where major institutions are allocating capital — across sectors, geographies, and individual companies.</p>
     </div>
+<!-- EXPLAINER BLOCK — to insert after the cover-grid div on the Cover page -->
+<div class="explainer-wrap">
+  <div class="explainer-label">Understanding the data</div>
+  <div class="explainer-grid">
+
+    <div class="explainer-card">
+      <span class="ec-icon">🏛️</span>
+      <div class="ec-title">Who is the SEC?</div>
+      <div class="ec-text">
+        The <strong>Securities and Exchange Commission</strong> is the US federal agency that regulates financial markets. It requires large institutional investors to publicly disclose their equity holdings — making their investment decisions visible to anyone who knows where to look.
+      </div>
+    </div>
+
+    <div class="explainer-card">
+      <span class="ec-icon">📋</span>
+      <div class="ec-title">What is a 13F filing?</div>
+      <div class="ec-text">
+        A <strong>Form 13F</strong> is a quarterly disclosure required from institutions managing over $100M in assets. It lists every equity position they hold — company, share count, and market value. Filed within 45 days of each quarter-end, it's one of the most transparent windows into how major capital is deployed.
+      </div>
+    </div>
+
+    <div class="explainer-card">
+      <span class="ec-icon">💡</span>
+      <div class="ec-title">Why does this data matter?</div>
+      <div class="ec-text">
+        Institutions manage <strong>trillions in assets</strong> and conduct deep research before every move. Their filings reveal sector convictions, emerging trends, and shifts in confidence — quarters before they appear in headlines. This platform structures that signal so you don't have to dig through raw filings yourself.
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- PLATFORM SUMMARY — insert after explainer cards on Cover page -->
+<div class="platform-wrap">
+  <div class="platform-label">What to expect on the platform</div>
+  <div class="platform-inner">
+
+    <!-- LEFT -->
+    <div class="pl-left">
+      <div class="pl-tag">Built for self-directed investors</div>
+      <div class="pl-headline">Institutional intelligence,<br>made accessible.</div>
+      <div class="pl-desc">
+        This platform surfaces <strong>how the biggest investors in the market allocate their capital</strong> — directly from public SEC filings, structured and visualised so you can act on it without a Bloomberg terminal.
+        <br><br>
+        No stock tips. No noise. Just <strong>auditable, data-driven insight</strong> to support your own research process.
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="pl-right">
+      <div class="pl-benefits">
+
+        <div class="pl-benefit">
+          <span class="pl-benefit-icon">🏦</span>
+          <div class="pl-benefit-text">
+            <div class="pl-benefit-title">Track institutional behaviour</div>
+            <div class="pl-benefit-sub">See what funds, banks and asset managers are buying, holding or exiting — by sector, country and company.</div>
+          </div>
+        </div>
+
+        <div class="pl-benefit">
+          <span class="pl-benefit-icon">📈</span>
+          <div class="pl-benefit-text">
+            <div class="pl-benefit-title">Spot trends before they surface</div>
+            <div class="pl-benefit-sub">Quarterly flow data reveals conviction shifts and emerging sector rotations, quarters before they appear in headlines.</div>
+          </div>
+        </div>
+
+        <div class="pl-benefit">
+          <span class="pl-benefit-icon">🔍</span>
+          <div class="pl-benefit-text">
+            <div class="pl-benefit-title">Screen and drill down</div>
+            <div class="pl-benefit-sub">Filter stocks by sector, market cap, country, revenue growth and institutional ownership. Export raw data for your own models.</div>
+          </div>
+        </div>
+
+        <div class="pl-benefit">
+          <span class="pl-benefit-icon">📥</span>
+          <div class="pl-benefit-text">
+            <div class="pl-benefit-title">Download and build</div>
+            <div class="pl-benefit-sub">Ready-made reports or raw datasets — for Excel users, Python analysts, or anyone who prefers to build their own view.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
     <div class="cover-divider"></div>
     <div>
       <div class="cover-section-label">What You Will Find Inside</div>
@@ -886,10 +1450,10 @@ canvas { max-width: 100%; }
 
     <!-- KPIs -->
     <div class="kpi-strip" style="margin-bottom:28px;">
-      <div class="kpi-card"><div class="kpi-num"><span class="blocked" style="padding:4px 16px;display:block;width:80px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="kpi-lbl">Institutional Investors</div></div>
-      <div class="kpi-card"><div class="kpi-num"><span class="blocked" style="padding:4px 20px;display:block;width:80px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="kpi-lbl">Total Investments</div></div>
-      <div class="kpi-card"><div class="kpi-num"><span class="blocked" style="padding:4px 20px;display:block;width:80px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="kpi-lbl">Avg. Shares per Investment</div></div>
-      <div class="kpi-card"><div class="kpi-num"><span class="blurred">$203B</span></div><div class="kpi-lbl">Total Investment Value</div></div>
+      <div class="kpi-card"><div class="kpi-num">10–20</div><div class="kpi-lbl">Institutional Investors</div></div>
+      <div class="kpi-card"><div class="kpi-num">200–250</div><div class="kpi-lbl">Total Investments</div></div>
+      <div class="kpi-card"><div class="kpi-num">~3–5M</div><div class="kpi-lbl">Avg. Shares per Investment</div></div>
+      <div class="kpi-card"><div class="kpi-num">$150–250B</div><div class="kpi-lbl">Total Investment Value</div></div>
     </div>
 
     <!-- Charts row -->
@@ -922,17 +1486,17 @@ canvas { max-width: 100%; }
           <th>% of Total</th><th>Investors</th><th>Investments</th>
         </tr></thead>
         <tbody>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#163472;margin-right:8px;vertical-align:middle;"></span>Financial Services</td><td class="mono">991,922,918</td><td class="mono"><span class="blurred">$107,289M</span></td><td class="pos">52.75%</td><td>15</td><td>56</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1d60b5;margin-right:8px;vertical-align:middle;"></span>Technology</td><td class="mono">354,606,730</td><td class="mono"><span class="blurred">$65,040M</span></td><td>31.98%</td><td>11</td><td>42</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#f4a623;margin-right:8px;vertical-align:middle;"></span>Consumer Defensive</td><td class="mono">400,645,625</td><td class="mono"><span class="blurred">$14,689M</span></td><td>7.22%</td><td>8</td><td>14</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8e44ad;margin-right:8px;vertical-align:middle;"></span>Communication Services</td><td class="mono">170,813,341</td><td class="mono"><span class="blurred">$6,070M</span></td><td>2.98%</td><td>11</td><td>25</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#e67e22;margin-right:8px;vertical-align:middle;"></span>Consumer Cyclical</td><td class="mono">21,330,332</td><td class="mono"><span class="blurred">$3,684M</span></td><td>1.81%</td><td>11</td><td>17</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#27ae60;margin-right:8px;vertical-align:middle;"></span>Industrials</td><td class="mono">18,317,357</td><td class="mono"><span class="blurred">$3,526M</span></td><td>1.73%</td><td>9</td><td>38</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a085;margin-right:8px;vertical-align:middle;"></span>Healthcare</td><td class="mono">18,548,007</td><td class="mono"><span class="blurred">$2,587M</span></td><td>1.27%</td><td>12</td><td>30</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#c0392b;margin-right:8px;vertical-align:middle;"></span>Basic Materials</td><td class="mono">3,175,045</td><td class="mono"><span class="blurred">$423M</span></td><td>0.21%</td><td>6</td><td>15</td></tr>
-          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7f8c8d;margin-right:8px;vertical-align:middle;"></span>Real Estate</td><td class="mono">13,340,609</td><td class="mono"><span class="blurred">$92M</span></td><td>0.05%</td><td>2</td><td>2</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#163472;margin-right:8px;vertical-align:middle;"></span>Financial Services</td><td class="mono"><span class="blurred">991,922,918</td></td></span></td><td class="mono"><span class="blurred">$107,289M</td></td></span></td><td class="pos">52.75%</td><td>15</td><td>56</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#1d60b5;margin-right:8px;vertical-align:middle;"></span>Technology</td><td class="mono"><span class="blurred">354,606,730</td></td></span></td><td class="mono"><span class="blurred">$65,040M</td></td></span></td><td>31.98%</td><td>11</td><td>42</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#f4a623;margin-right:8px;vertical-align:middle;"></span>Consumer Defensive</td><td class="mono"><span class="blurred">400,645,625</td></td></span></td><td class="mono"><span class="blurred">$14,689M</td></td></span></td><td>7.22%</td><td>8</td><td>14</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#8e44ad;margin-right:8px;vertical-align:middle;"></span>Communication Services</td><td class="mono"><span class="blurred">170,813,341</td></td></span></td><td class="mono"><span class="blurred">$6,070M</td></td></span></td><td>2.98%</td><td>11</td><td>25</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#e67e22;margin-right:8px;vertical-align:middle;"></span>Consumer Cyclical</td><td class="mono"><span class="blurred">21,330,332</td></td></span></td><td class="mono"><span class="blurred">$3,684M</td></td></span></td><td>1.81%</td><td>11</td><td>17</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#27ae60;margin-right:8px;vertical-align:middle;"></span>Industrials</td><td class="mono"><span class="blurred">18,317,357</td></td></span></td><td class="mono"><span class="blurred">$3,526M</td></td></span></td><td>1.73%</td><td>9</td><td>38</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#16a085;margin-right:8px;vertical-align:middle;"></span>Healthcare</td><td class="mono"><span class="blurred">18,548,007</td></td></span></td><td class="mono"><span class="blurred">$2,587M</td></td></span></td><td>1.27%</td><td>12</td><td>30</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#c0392b;margin-right:8px;vertical-align:middle;"></span>Basic Materials</td><td class="mono"><span class="blurred">3,175,045</td></td></span></td><td class="mono"><span class="blurred">$423M</td></td></span></td><td>0.21%</td><td>6</td><td>15</td></tr>
+          <tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#7f8c8d;margin-right:8px;vertical-align:middle;"></span>Real Estate</td><td class="mono"><span class="blurred">13,340,609</td></td></span></td><td class="mono"><span class="blurred">$92M</td></td></span></td><td>0.05%</td><td>2</td><td>2</td></tr>
         </tbody>
-        <tfoot><tr><td>Total</td><td>1,992,699,964</td><td><span class="blurred">$203,401M</span></td><td>100.00%</td><td>17</td><td>239</td></tr></tfoot>
+        <tfoot><tr><td>Total</td><td>1,992,699,964</td><td>$203,401M</td><td>100.00%</td><td>17</td><td>239</td></tr></tfoot>
       </table>
     </div>
   </div>
@@ -943,148 +1507,493 @@ canvas { max-width: 100%; }
 </div>
 
 
+
+<!-- ══════════════════════════════════════════════
+     PAGE 4 — MOST BOUGHT & MOST SOLD
+════════════════════════════════════════════════ -->
+<div class="page landscape" id="p4">
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div>
+    <div class="ph-eyebrow">Market Activity</div>
+    <div class="ph-title">Most Bought & Most Sold Stocks</div>
+    <div class="ph-sub">Fire, Marine & Casualty Insurance · Q2 2025 · Ranked by total shares · vs Q1 2025</div>
+  </div>
+  <div><div class="ph-page-num">04 / 10</div></div>
+</div>
+
+<div class="page-body">
+
+  <!-- SECTOR FILTER -->
+  <div class="sector-filters" id="sectorFilters">
+    <button class="sf-btn active" data-sector="all" onclick="filterSector('all')">All sectors</button>
+    <button class="sf-btn" data-sector="technology" onclick="filterSector('technology')">
+      <span class="sf-dot" style="background:#1d60b5"></span>Technology
+    </button>
+    <button class="sf-btn" data-sector="financial" onclick="filterSector('financial')">
+      <span class="sf-dot" style="background:#163472"></span>Financial Services
+    </button>
+    <button class="sf-btn" data-sector="healthcare" onclick="filterSector('healthcare')">
+      <span class="sf-dot" style="background:#0f8a5f"></span>Healthcare
+    </button>
+    <button class="sf-btn" data-sector="consumer-def" onclick="filterSector('consumer-def')">
+      <span class="sf-dot" style="background:#f4a623"></span>Consumer Defensive
+    </button>
+    <button class="sf-btn" data-sector="industrials" onclick="filterSector('industrials')">
+      <span class="sf-dot" style="background:#e67e22"></span>Industrials
+    </button>
+    <button class="sf-btn" data-sector="comm" onclick="filterSector('comm')">
+      <span class="sf-dot" style="background:#8e44ad"></span>Comm. Services
+    </button>
+    <button class="sf-btn" data-sector="energy" onclick="filterSector('energy')">
+      <span class="sf-dot" style="background:#c0392b"></span>Energy
+    </button>
+  </div>
+
+  <!-- ▲ MOST BOUGHT -->
+  <div class="table-section">
+    <div class="table-head-bar buy">
+      <div>
+        <div class="thb-title">▲ Most Bought Stocks</div>
+        <div class="thb-sub">Ranked by total shares bought · Q2 2025</div>
+      </div>
+      <span class="thb-count" id="buy-count">10 stocks</span>
+    </div>
+    <table class="data-table" id="buy-table">
+      <thead><tr>
+        <th>#</th>
+        <th>Ticker</th>
+        <th>Company</th>
+        <th>Sector</th>
+        <th>Institutions</th>
+        <th>Shares Bought</th>
+        <th>vs Q1 (shares)</th>
+        <th>vs Q1 (%)</th>
+      </tr></thead>
+      <tbody>
+        <tr class="sector-row" data-sector="financial">
+          <td><span class="rank top3">1</span></td>
+          <td><span class="ticker">BAC</span></td>
+          <td><div class="cell-name">Bank of America</div><div class="cell-sub">Banks — Diversified</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Financial Services</td>
+          <td style="text-align:right"><span class="inst-count">8</span></td>
+          <td class="mono">605,267,375</td>
+          <td class="mono neg">−148,000,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−19.6%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="financial">
+          <td><span class="rank top3">2</span></td>
+          <td><span class="ticker">AXP</span></td>
+          <td><div class="cell-name">American Express</div><div class="cell-sub">Credit Services</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Financial Services</td>
+          <td style="text-align:right"><span class="inst-count">6</span></td>
+          <td class="mono">151,610,700</td>
+          <td class="mono pos">+2,200,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+1.5%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="consumer-def">
+          <td><span class="rank top3">3</span></td>
+          <td><span class="ticker">KHC</span></td>
+          <td><div class="cell-name">Kraft Heinz</div><div class="cell-sub">Packaged Foods</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Consumer Defensive</td>
+          <td style="text-align:right"><span class="inst-count">5</span></td>
+          <td class="mono">325,634,818</td>
+          <td class="mono pos">+8,400,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+2.6%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="technology">
+          <td><span class="rank">4</span></td>
+          <td><span class="ticker">AAPL</span></td>
+          <td><div class="cell-name">Apple Inc.</div><div class="cell-sub">Consumer Electronics</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Technology</td>
+          <td style="text-align:right"><span class="inst-count">7</span></td>
+          <td class="mono">280,000,000</td>
+          <td class="mono neg">−115,000,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−29.1%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="energy">
+          <td><span class="rank">5</span></td>
+          <td><span class="ticker">OXY</span></td>
+          <td><div class="cell-name">Occidental Petroleum</div><div class="cell-sub">Oil & Gas E&P</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Energy</td>
+          <td style="text-align:right"><span class="inst-count">4</span></td>
+          <td class="mono">248,019,000</td>
+          <td class="mono pos">+12,500,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+5.3%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="technology">
+          <td><span class="rank">6</span></td>
+          <td><span class="ticker">INTC</span></td>
+          <td><div class="cell-name">Intel Corporation</div><div class="cell-sub">Semiconductors</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Technology</td>
+          <td style="text-align:right"><span class="inst-count">3</span></td>
+          <td class="mono">131,200,000</td>
+          <td class="mono pos">+22,400,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+20.6%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="financial">
+          <td><span class="rank">7</span></td>
+          <td><span class="ticker">MCO</span></td>
+          <td><div class="cell-name">Moody's Corporation</div><div class="cell-sub">Financial Data</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Financial Services</td>
+          <td style="text-align:right"><span class="inst-count">4</span></td>
+          <td class="mono">24,669,778</td>
+          <td class="mono pos">+1,100,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+4.7%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="healthcare">
+          <td><span class="rank">8</span></td>
+          <td><span class="ticker">UNH</span></td>
+          <td><div class="cell-name">UnitedHealth Group</div><div class="cell-sub">Healthcare Plans</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Healthcare</td>
+          <td style="text-align:right"><span class="inst-count">5</span></td>
+          <td class="mono">18,548,007</td>
+          <td class="mono pos">+3,200,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+20.8%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="industrials">
+          <td><span class="rank">9</span></td>
+          <td><span class="ticker">UNP</span></td>
+          <td><div class="cell-name">Union Pacific</div><div class="cell-sub">Railroads</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Industrials</td>
+          <td style="text-align:right"><span class="inst-count">3</span></td>
+          <td class="mono">18,317,357</td>
+          <td class="mono pos">+950,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+5.5%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="comm">
+          <td><span class="rank">10</span></td>
+          <td><span class="ticker">VZ</span></td>
+          <td><div class="cell-name">Verizon Communications</div><div class="cell-sub">Telecom Services</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Comm. Services</td>
+          <td style="text-align:right"><span class="inst-count">4</span></td>
+          <td class="mono">13,340,609</td>
+          <td class="mono pos">+2,100,000</td>
+          <td><div class="change-cell"><span class="change-pct pos">+18.7%</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ▼ MOST SOLD -->
+  <div class="table-section">
+    <div class="table-head-bar sell">
+      <div>
+        <div class="thb-title">▼ Most Sold Stocks</div>
+        <div class="thb-sub">Ranked by total shares sold or reduced · Q2 2025</div>
+      </div>
+      <span class="thb-count" id="sell-count">8 stocks</span>
+    </div>
+    <table class="data-table" id="sell-table">
+      <thead><tr>
+        <th>#</th>
+        <th>Ticker</th>
+        <th>Company</th>
+        <th>Sector</th>
+        <th>Institutions</th>
+        <th>Shares Sold</th>
+        <th>vs Q1 (shares)</th>
+        <th>vs Q1 (%)</th>
+      </tr></thead>
+      <tbody>
+        <tr class="sector-row" data-sector="technology">
+          <td><span class="rank top3">1</span></td>
+          <td><span class="ticker">AAPL</span></td>
+          <td><div class="cell-name">Apple Inc.</div><div class="cell-sub">Consumer Electronics</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Technology</td>
+          <td style="text-align:right"><span class="inst-count">5</span></td>
+          <td class="mono neg">115,000,000</td>
+          <td class="mono neg">−115,000,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−29.1%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="financial">
+          <td><span class="rank top3">2</span></td>
+          <td><span class="ticker">BAC</span></td>
+          <td><div class="cell-name">Bank of America</div><div class="cell-sub">Banks — Diversified</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Financial Services</td>
+          <td style="text-align:right"><span class="inst-count">6</span></td>
+          <td class="mono neg">148,000,000</td>
+          <td class="mono neg">−148,000,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−19.6%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="healthcare">
+          <td><span class="rank top3">3</span></td>
+          <td><span class="ticker">ABT</span></td>
+          <td><div class="cell-name">Abbott Laboratories</div><div class="cell-sub">Medical Devices</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Healthcare</td>
+          <td style="text-align:right"><span class="inst-count">4</span></td>
+          <td class="mono neg">36,000,000</td>
+          <td class="mono neg">−1,400,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−3.7%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="consumer-def">
+          <td><span class="rank">4</span></td>
+          <td><span class="ticker">PG</span></td>
+          <td><div class="cell-name">Procter & Gamble</div><div class="cell-sub">Household Products</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Consumer Defensive</td>
+          <td style="text-align:right"><span class="inst-count">3</span></td>
+          <td class="mono neg">315,400</td>
+          <td class="mono neg">−315,400</td>
+          <td><div class="change-cell"><span class="change-pct neg">−100%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="technology">
+          <td><span class="rank">5</span></td>
+          <td><span class="ticker">HPQ</span></td>
+          <td><div class="cell-name">HP Inc.</div><div class="cell-sub">Computer Hardware</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Technology</td>
+          <td style="text-align:right"><span class="inst-count">2</span></td>
+          <td class="mono neg">3,921,000</td>
+          <td class="mono neg">−3,921,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−100%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="industrials">
+          <td><span class="rank">6</span></td>
+          <td><span class="ticker">MMM</span></td>
+          <td><div class="cell-name">3M Company</div><div class="cell-sub">Industrial Conglomerates</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Industrials</td>
+          <td style="text-align:right"><span class="inst-count">3</span></td>
+          <td class="mono neg">2,840,000</td>
+          <td class="mono neg">−620,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−17.9%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="financial">
+          <td><span class="rank">7</span></td>
+          <td><span class="ticker">GS</span></td>
+          <td><div class="cell-name">Goldman Sachs</div><div class="cell-sub">Capital Markets</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Financial Services</td>
+          <td style="text-align:right"><span class="inst-count">2</span></td>
+          <td class="mono neg">1,240,000</td>
+          <td class="mono neg">−380,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−23.5%</span></div></td>
+        </tr>
+        <tr class="sector-row" data-sector="comm">
+          <td><span class="rank">8</span></td>
+          <td><span class="ticker">CMCSA</span></td>
+          <td><div class="cell-name">Comcast Corporation</div><div class="cell-sub">Telecom Services</div></td>
+          <td style="color:var(--muted);font-size:10.5px;">Comm. Services</td>
+          <td style="text-align:right"><span class="inst-count">2</span></td>
+          <td class="mono neg">890,000</td>
+          <td class="mono neg">−210,000</td>
+          <td><div class="change-cell"><span class="change-pct neg">−19.1%</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- /page-body -->
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <span class="pf-note">Informational only — not investment advice. Based on public SEC 13F filings. Past performance is not indicative of future results.</span>
+  <span class="pf-badge">Confidential · Page 4 of 11</span>
+</div>
+
+<script>
+function filterSector(sector) {
+  // Update button states
+  document.querySelectorAll('.sf-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.sector === sector);
+  });
+
+  // Filter rows in both tables
+  document.querySelectorAll('.sector-row').forEach(row => {
+    const match = sector === 'all' || row.dataset.sector === sector;
+    row.classList.toggle('hidden', !match);
+  });
+
+  // Update counts
+  const buyVisible  = document.querySelectorAll('#buy-table .sector-row:not(.hidden)').length;
+  const sellVisible = document.querySelectorAll('#sell-table .sector-row:not(.hidden)').length;
+  document.getElementById('buy-count').textContent  = buyVisible  + ' stock' + (buyVisible  !== 1 ? 's' : '');
+  document.getElementById('sell-count').textContent = sellVisible + ' stock' + (sellVisible !== 1 ? 's' : '');
+
+  // Re-number visible rows
+  ['buy-table','sell-table'].forEach(id => {
+    let rank = 1;
+    document.querySelectorAll(`#${id} .sector-row:not(.hidden)`).forEach(row => {
+      const rankEl = row.querySelector('.rank');
+      rankEl.textContent = rank;
+      rankEl.className = 'rank' + (rank <= 3 ? ' top3' : '');
+      rank++;
+    });
+  });
+}
+</script>
+<script>
+function filterSector(sector) {
+  // Update button states
+  document.querySelectorAll('.sf-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.sector === sector);
+  });
+
+  // Filter rows in both tables
+  document.querySelectorAll('.sector-row').forEach(row => {
+    const match = sector === 'all' || row.dataset.sector === sector;
+    row.classList.toggle('hidden', !match);
+  });
+
+  // Update counts
+  const buyVisible  = document.querySelectorAll('#buy-table .sector-row:not(.hidden)').length;
+  const sellVisible = document.querySelectorAll('#sell-table .sector-row:not(.hidden)').length;
+  document.getElementById('buy-count').textContent  = buyVisible  + ' stock' + (buyVisible  !== 1 ? 's' : '');
+  document.getElementById('sell-count').textContent = sellVisible + ' stock' + (sellVisible !== 1 ? 's' : '');
+
+  // Re-number visible rows
+  ['buy-table','sell-table'].forEach(id => {
+    let rank = 1;
+    document.querySelectorAll(`#${id} .sector-row:not(.hidden)`).forEach(row => {
+      const rankEl = row.querySelector('.rank');
+      rankEl.textContent = rank;
+      rankEl.className = 'rank' + (rank <= 3 ? ' top3' : '');
+      rank++;
+    });
+  });
+}
+</script>
+</div>
+
 <!-- ══════════════════════════════════════════════
      PAGE 4 — INSTITUTION LIST
 ════════════════════════════════════════════════ -->
-<div class="page landscape" id="p4">
+<div class="page landscape" id="p4b">
   <div class="page-header">
     <div class="ph-left">
       <div class="ph-eyebrow">Investor Directory</div>
       <div class="ph-title">Institution List</div>
       <div class="ph-sub">Fire, Marine & Casualty Insurance · All Active Institutional Investors · Q2 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">04 / 09</div></div>
+    <div class="ph-right"><div class="ph-page-num">05 / 11</div></div>
   </div>
   <div class="page-body">
     <div class="inst-grid">
 
       <div class="inst-card">
         <div class="inst-rank">#1 by value</div>
-        <div class="inst-name">Institution Alpha</div>
-        <div class="inst-val"><span class="blurred">$257,521M</span></div>
-        <div class="inst-meta">41 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">Berkshire Hathaway Inc</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;"><span class="blurred">$257,521M</span></span></div>
+        <div class="inst-meta">41 investments · CIK 0001067983</div>
         <span class="inst-cap">Large Cap</span>
         <div class="inst-links">
-          <a class="link-cell" href="https://berkshirehathaway.com" target="_blank">🔗 [REDACTED]</a>
+          <a class="link-cell" href="https://berkshirehathaway.com" target="_blank">🔗 berkshirehathaway.com</a>
         </div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-addr">📍 3555 Farnam St, Omaha, NE 68131</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#2 by value</div>
-        <div class="inst-name">Institution Beta</div>
-        <div class="inst-val"><span class="blurred">$12,055M</span></div>
-        <div class="inst-meta">27 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">Loews Corp</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$12,055M</span></div>
+        <div class="inst-meta">27 investments · CIK 0000060086</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://loews.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://loews.com" target="_blank">🔗 loews.com</a></div>
+        <div class="inst-addr">📍 667 Madison Ave, New York, NY 10065</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#3 by value</div>
-        <div class="inst-name">Institution Gamma</div>
-        <div class="inst-val"><span class="blurred">$11,827M</span></div>
-        <div class="inst-meta">137 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">Markel Group Inc.</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$11,827M</span></div>
+        <div class="inst-meta">137 investments · CIK 0001096343</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://markel.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://markel.com" target="_blank">🔗 markel.com</a></div>
+        <div class="inst-addr">📍 4521 Highwoods Pkwy, Richmond, VA 23060</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#4 by value</div>
-        <div class="inst-name">Institution Delta</div>
-        <div class="inst-val"><span class="blurred">$4,719M</span></div>
-        <div class="inst-meta">53 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">Cincinnati Financial Corp</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$4,719M</span></div>
+        <div class="inst-meta">53 investments · CIK 0000020286</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://cinfin.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://cinfin.com" target="_blank">🔗 cinfin.com</a></div>
+        <div class="inst-addr">📍 6200 S Gilmore Rd, Fairfield, OH 45014</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#5 by value</div>
-        <div class="inst-name">Institution Epsilon</div>
-        <div class="inst-val"><span class="blurred">$4,367M</span></div>
-        <div class="inst-meta">3 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">American International Group</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$4,367M</span></div>
+        <div class="inst-meta">3 investments · CIK 0000005272</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://aig.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://aig.com" target="_blank">🔗 aig.com</a></div>
+        <div class="inst-addr">📍 1271 Avenue of Americas, New York, NY 10020</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#6 by value</div>
-        <div class="inst-name">Institution Zeta</div>
-        <div class="inst-val"><span class="blurred">$1,906M</span></div>
-        <div class="inst-meta">203 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">W. R. Berkley Corp</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$1,906M</span></div>
+        <div class="inst-meta">203 investments · CIK 0000011544</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://berkley.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://berkley.com" target="_blank">🔗 berkley.com</a></div>
+        <div class="inst-addr">📍 475 Steamboat Rd, Greenwich, CT 06830</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#7 by value</div>
-        <div class="inst-name">Institution Eta</div>
-        <div class="inst-val"><span class="blurred">$1,871M</span></div>
-        <div class="inst-meta">28 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">Fairfax Financial Holdings</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$1,871M</span></div>
+        <div class="inst-meta">28 investments · CIK 0000915191</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://fairfaxfin.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://fairfaxfin.com" target="_blank">🔗 fairfaxfin.com</a></div>
+        <div class="inst-addr">📍 95 Wellington St W, Toronto, ON M5J 2N7</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#8 by value</div>
-        <div class="inst-name">Institution Theta</div>
-        <div class="inst-val"><span class="blurred">$1,388M</span></div>
-        <div class="inst-meta">176 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">Allstate Corp</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$1,388M</span></div>
+        <div class="inst-meta">176 investments · CIK 0000899051</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://allstate.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://allstate.com" target="_blank">🔗 allstate.com</a></div>
+        <div class="inst-addr">📍 2775 Sanders Rd, Northbrook, IL 60062</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#9 by value</div>
-        <div class="inst-name">Institution Sigma</div>
-        <div class="inst-val"><span class="blurred">$640M</span></div>
-        <div class="inst-meta">5 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">RenaissanceRe Holdings Ltd</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$640M</span></div>
+        <div class="inst-meta">5 investments · CIK 0000913144</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://renre.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://renre.com" target="_blank">🔗 renre.com</a></div>
+        <div class="inst-addr">📍 12 Crow Lane, Pembroke HM 19, Bermuda</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#10 by value</div>
-        <div class="inst-name">Institution Kappa</div>
-        <div class="inst-val"><span class="blurred">$486M</span></div>
-        <div class="inst-meta">37 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">Kinsale Capital Group, Inc.</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$486M</span></div>
+        <div class="inst-meta">37 investments · CIK 0001669162</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://kinsalecapital.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://kinsalecapital.com" target="_blank">🔗 kinsalecapital.com</a></div>
+        <div class="inst-addr">📍 4600 Cox Rd, Glen Allen, VA 23060</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#11 by value</div>
-        <div class="inst-name">Institution Lambda</div>
-        <div class="inst-val"><span class="blurred">$278M</span></div>
-        <div class="inst-meta">13 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">AmTrust Financial Services</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$278M</span></div>
+        <div class="inst-meta">13 investments · CIK 0001365555</div>
         <span class="inst-cap" style="background:#f0f4f8;color:#636e7b;">—</span>
-        <div class="inst-links"><a class="link-cell" href="https://amtrustfinancial.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://amtrustfinancial.com" target="_blank">🔗 amtrustfinancial.com</a></div>
+        <div class="inst-addr">📍 800 Superior Ave, Cleveland, OH 44114</div>
       </div>
 
       <div class="inst-card">
         <div class="inst-rank">#12 by value</div>
-        <div class="inst-name">Institution Mu</div>
-        <div class="inst-val"><span class="blurred">$260M</span></div>
-        <div class="inst-meta">60 investments · CIK: [REDACTED]</div>
+        <div class="inst-name">American Financial Group, Inc.</div>
+        <div class="inst-val"><span class="blurred" style="background:#e4eaf2;padding:2px 12px;border-radius:3px;">$260M</span></div>
+        <div class="inst-meta">60 investments · CIK 0001042046</div>
         <span class="inst-cap">Large Cap</span>
-        <div class="inst-links"><a class="link-cell" href="https://afgfinancial.com" target="_blank">🔗 [REDACTED]</a></div>
-        <div class="inst-addr">📍 [ADDRESS REDACTED]</div>
+        <div class="inst-links"><a class="link-cell" href="https://afgfinancial.com" target="_blank">🔗 afgfinancial.com</a></div>
+        <div class="inst-addr">📍 301 E 4th St, Cincinnati, OH 45202</div>
       </div>
 
     </div>
   </div>
   <div class="page-footer">
     <span class="pf-note">Informational only — not investment advice. Based on public SEC 13F filings.</span>
-    <span class="pf-badge">Confidential · Page 4</span>
+    <span class="pf-badge">Confidential · Page 4 of 11</span>
   </div>
 </div>
 
@@ -1096,24 +2005,24 @@ canvas { max-width: 100%; }
   <div class="page-header">
     <div class="ph-left">
       <div class="ph-eyebrow">Institution Portfolio Overview</div>
-      <div class="ph-title">Institution Alpha</div>
-      <div class="ph-sub">CIK: [REDACTED] · Fire, Marine & Casualty Insurance · as of June 30, 2025</div>
+      <div class="ph-title">Berkshire Hathaway Inc</div>
+      <div class="ph-sub">CIK: 0001067983 · Fire, Marine & Casualty Insurance · as of June 30, 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">05 / 09</div></div>
+    <div class="ph-right"><div class="ph-page-num">06 / 11</div></div>
   </div>
   <div class="page-body">
 
     <!-- Hero card -->
     <div class="company-hero">
       <div>
-        <div class="ch-name">Institution Alpha</div>
-        <div class="ch-ticker">NYSE: BRK.A / BRK.B &nbsp;·&nbsp; <a href="#" target="_blank" style="color:var(--gold);text-decoration:none;">[REDACTED] ↗</a></div>
+        <div class="ch-name">Berkshire Hathaway Inc</div>
+        <div class="ch-ticker">NYSE: BRK.A / BRK.B &nbsp;·&nbsp; <a href="https://berkshirehathaway.com" target="_blank" style="color:var(--gold);text-decoration:none;">berkshirehathaway.com ↗</a></div>
         <div class="ch-meta-grid">
           <div class="ch-meta-item"><div class="cml">Industry</div><div class="cmv">Financial Services</div></div>
           <div class="ch-meta-item"><div class="cml">Sector</div><div class="cmv">Fire, Marine & Casualty Ins.</div></div>
           <div class="ch-meta-item"><div class="cml">Latest Reporting</div><div class="cmv">Q2 2025 · June 30, 2025</div></div>
           <div class="ch-meta-item"><div class="cml">No. of Investments</div><div class="cmv">27</div></div>
-          <div class="ch-meta-item"><div class="cml">Largest Position</div><div class="cmv">AAPL — <span class="blurred">$57,448M</span></div></div>
+          <div class="ch-meta-item"><div class="cml">Largest Position</div><div class="cmv">AAPL — $57,448M</div></div>
           <div class="ch-meta-item"><div class="cml">Latest Purchase</div><div class="cmv">COF — Q2 2025</div></div>
           <div class="ch-meta-item"><div class="cml">Latest Closure</div><div class="cmv">HPQ — Q2 2025</div></div>
           <div class="ch-meta-item"><div class="cml">Total Value</div><div class="cmv"><span class="blurred">$184,058M</span></div></div>
@@ -1123,7 +2032,7 @@ canvas { max-width: 100%; }
 
     <!-- Biz summary -->
     <div class="biz-box">
-      Institution Alpha., through its subsidiaries, engages in insurance, reinsurance, freight rail transportation, utilities, energy, and manufacturing activities. Its insurance and reinsurance businesses provide property and casualty coverage worldwide. The railroad segment transports agricultural, consumer, and industrial products. The company also generates, transmits, and distributes natural gas and electricity. Founded 1839 · Headquartered in Omaha, Nebraska · Chaired by Warren E. Buffett.
+      Berkshire Hathaway Inc., through its subsidiaries, engages in insurance, reinsurance, freight rail transportation, utilities, energy, and manufacturing activities. Its insurance and reinsurance businesses provide property and casualty coverage worldwide. The railroad segment transports agricultural, consumer, and industrial products. The company also generates, transmits, and distributes natural gas and electricity. Founded 1839 · Headquartered in Omaha, Nebraska · Chaired by Warren E. Buffett.
     </div>
 
     <!-- Charts + table -->
@@ -1158,22 +2067,22 @@ canvas { max-width: 100%; }
           <th>Avg. Purchase Price</th><th>Shares Bought</th><th>Value (USD)</th><th>% of Total</th>
         </tr></thead>
         <tbody>
-          <tr><td><span class="ticker">AAXX</span></td><td style="text-align:left">Company A</td><td>Technology</td><td class="mono"><span class="blurred">$205.17</span></td><td class="mono">280,000,000</td><td class="mono"><span class="blurred">$57,448M</span></td><td class="pos">31.21%</td></tr>
-          <tr><td><span class="ticker">BXXX</span></td><td style="text-align:left">Company B</td><td>Financial Svcs</td><td class="mono"><span class="blurred">$318.98</span></td><td class="mono">151,610,700</td><td class="mono"><span class="blurred">$48,361M</span></td><td>26.27%</td></tr>
-          <tr><td><span class="ticker">CYYY</span></td><td style="text-align:left">Company C</td><td>Financial Svcs</td><td class="mono"><span class="blurred">$47.32</span></td><td class="mono">605,267,375</td><td class="mono"><span class="blurred">$28,641M</span></td><td>15.56%</td></tr>
-          <tr><td><span class="ticker">DZZZ</span></td><td style="text-align:left">Company D</td><td>Financial Svcs</td><td class="mono"><span class="blurred">$501.59</span></td><td class="mono">24,669,778</td><td class="mono"><span class="blurred">$12,374M</span></td><td>6.72%</td></tr>
-          <tr><td><span class="ticker">EAAA</span></td><td style="text-align:left">Company E</td><td>Consumer Def.</td><td class="mono"><span class="blurred">$25.82</span></td><td class="mono">325,634,818</td><td class="mono"><span class="blurred">$8,408M</span></td><td>4.57%</td></tr>
-          <tr><td><span class="ticker">IFFF</span></td><td style="text-align:left">Company I</td><td>Energy</td><td class="mono"><span class="blurred">$57.32</span></td><td class="mono">248,019,000</td><td class="mono"><span class="blurred">$14,217M</span></td><td>7.72%</td></tr>
-          <tr><td><span class="ticker">FBBB</span></td><td style="text-align:left">Company F</td><td>Technology</td><td class="mono"><span class="blurred">$288.80</span></td><td class="mono">13,289,880</td><td class="mono"><span class="blurred">$3,838M</span></td><td>2.09%</td></tr>
-          <tr><td><span class="ticker">HDDD</span></td><td style="text-align:left">Company H</td><td>Financial Svcs</td><td class="mono"><span class="blurred">$355.05</span></td><td class="mono">8,297,460</td><td class="mono"><span class="blurred">$2,946M</span></td><td>1.60%</td></tr>
+          <tr><td><span class="ticker">AAPL</span></td><td style="text-align:left">Apple Inc.</td><td>Technology</td><td class="mono">$205.17</td><td class="mono"><span class="blurred">280,000,000</td></td></span></td><td class="mono"><span class="blurred">$57,448M</td></td></span></td><td class="pos">31.21%</td></tr>
+          <tr><td><span class="ticker">AXP</span></td><td style="text-align:left">American Express</td><td>Financial Svcs</td><td class="mono">$318.98</td><td class="mono"><span class="blurred">151,610,700</td></td></span></td><td class="mono"><span class="blurred">$48,361M</td></td></span></td><td>26.27%</td></tr>
+          <tr><td><span class="ticker">BAC</span></td><td style="text-align:left">Bank of America Corp</td><td>Financial Svcs</td><td class="mono">$47.32</td><td class="mono"><span class="blurred">605,267,375</td></td></span></td><td class="mono"><span class="blurred">$28,641M</td></td></span></td><td>15.56%</td></tr>
+          <tr><td><span class="ticker">MCO</span></td><td style="text-align:left">Moody's Corporation</td><td>Financial Svcs</td><td class="mono">$501.59</td><td class="mono"><span class="blurred">24,669,778</td></td></span></td><td class="mono"><span class="blurred">$12,374M</td></td></span></td><td>6.72%</td></tr>
+          <tr><td><span class="ticker">KHC</span></td><td style="text-align:left">The Kraft Heinz Co.</td><td>Consumer Def.</td><td class="mono">$25.82</td><td class="mono"><span class="blurred">325,634,818</td></td></span></td><td class="mono"><span class="blurred">$8,408M</td></td></span></td><td>4.57%</td></tr>
+          <tr><td><span class="ticker">OXY</span></td><td style="text-align:left">Occidental Petroleum</td><td>Energy</td><td class="mono">$57.32</td><td class="mono"><span class="blurred">248,019,000</td></td></span></td><td class="mono"><span class="blurred">$14,217M</td></td></span></td><td>7.72%</td></tr>
+          <tr><td><span class="ticker">VRSN</span></td><td style="text-align:left">VeriSign, Inc.</td><td>Technology</td><td class="mono">$288.80</td><td class="mono"><span class="blurred">13,289,880</td></td></span></td><td class="mono"><span class="blurred">$3,838M</td></td></span></td><td>2.09%</td></tr>
+          <tr><td><span class="ticker">V</span></td><td style="text-align:left">Visa Inc.</td><td>Financial Svcs</td><td class="mono">$355.05</td><td class="mono"><span class="blurred">8,297,460</td></td></span></td><td class="mono"><span class="blurred">$2,946M</td></td></span></td><td>1.60%</td></tr>
         </tbody>
-        <tfoot><tr><td>Total</td><td style="text-align:left"></td><td></td><td><span class="blurred">$158.19</span></td><td>1,682,891,622</td><td><span class="blurred">$184,058M</span></td><td>100.00%</td></tr></tfoot>
+        <tfoot><tr><td>Total</td><td style="text-align:left"></td><td></td><td>$158.19</td><td>1,682,891,622</td><td><span class="blurred">$184,058M</span></td><td>100.00%</td></tr></tfoot>
       </table>
     </div>
   </div>
   <div class="page-footer">
     <span class="pf-note">Informational only — not investment advice. Based on public SEC 13F filings. Past performance is not indicative of future results.</span>
-    <span class="pf-badge">Confidential · Page 5</span>
+    <span class="pf-badge">Confidential · Page 9 of 11 of 11 of 11</span>
   </div>
 </div>
 
@@ -1186,9 +2095,9 @@ canvas { max-width: 100%; }
     <div class="ph-left">
       <div class="ph-eyebrow">Investments Detail</div>
       <div class="ph-title">Institution Investments List</div>
-      <div class="ph-sub">Institution Zeta · CIK: [REDACTED] · as of June 30, 2025</div>
+      <div class="ph-sub">W. R. Berkley Corp · CIK: 0000011544 · as of June 30, 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">06 / 09</div></div>
+    <div class="ph-right"><div class="ph-page-num">07 / 11</div></div>
   </div>
   <div class="page-body">
     <table class="data-table">
@@ -1206,117 +2115,117 @@ canvas { max-width: 100%; }
       </tr></thead>
       <tbody>
         <tr>
-          <td><span class="ticker">QLLL</span></td>
-          <td style="text-align:left"><div class="cell-name">Company Q</div></td>
+          <td><span class="ticker">INTC</span></td>
+          <td style="text-align:left"><div class="cell-name">Intel Corporation</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Semiconductors</td>
-          <td class="mono">759,958</td><td class="mono"><span class="blurred">$17M</span></td><td class="mono"><span class="blurred">$22.40</span></td><td class="mono"><span class="blurred">$24.44</span></td>
+          <td class="mono"><span class="blurred">759,958</td></td></span></td><td class="mono"><span class="blurred">$17M</td></td></span></td><td class="mono">$22.40</td><td class="mono">$24.44</td>
           <td><div class="first-date"><span class="date-dot"></span>2019-03-31</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://intel.com" target="_blank">intel.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">RMMM</span></td>
-          <td style="text-align:left"><div class="cell-name">Company R</div></td>
+          <td><span class="ticker">ON</span></td>
+          <td style="text-align:left"><div class="cell-name">ON Semiconductor</div></td>
           <td><span class="badge badge-cons">B. Consensus</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Semiconductors</td>
-          <td class="mono">731,118</td><td class="mono"><span class="blurred">$38M</span></td><td class="mono"><span class="blurred">$52.41</span></td><td class="mono"><span class="blurred">$48.62</span></td>
+          <td class="mono"><span class="blurred">731,118</td></td></span></td><td class="mono"><span class="blurred">$38M</td></td></span></td><td class="mono">$52.41</td><td class="mono">$48.62</td>
           <td><div class="first-date"><span class="date-dot"></span>2021-06-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://onsemi.com" target="_blank">onsemi.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">SNNN</span></td>
-          <td style="text-align:left"><div class="cell-name">Company S</div></td>
+          <td><span class="ticker">OZK</span></td>
+          <td style="text-align:left"><div class="cell-name">Bank OZK</div></td>
           <td><span class="badge badge-cons">B. Consensus</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Banks - Regional</td>
-          <td class="mono">703,000</td><td class="mono"><span class="blurred">$33M</span></td><td class="mono"><span class="blurred">$47.06</span></td><td class="mono"><span class="blurred">$51.99</span></td>
+          <td class="mono"><span class="blurred">703,000</td></td></span></td><td class="mono"><span class="blurred">$33M</td></td></span></td><td class="mono">$47.06</td><td class="mono">$51.99</td>
           <td><div class="first-date"><span class="date-dot"></span>2022-09-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://bankozk.com" target="_blank">bankozk.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">TOOO</span></td>
-          <td style="text-align:left"><div class="cell-name">Company T</div></td>
+          <td><span class="ticker">CSCO</span></td>
+          <td style="text-align:left"><div class="cell-name">Cisco Systems, Inc.</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Communication Equipment</td>
-          <td class="mono">596,600</td><td class="mono"><span class="blurred">$41M</span></td><td class="mono"><span class="blurred">$69.38</span></td><td class="mono"><span class="blurred">$67.34</span></td>
+          <td class="mono"><span class="blurred">596,600</td></td></span></td><td class="mono"><span class="blurred">$41M</td></td></span></td><td class="mono">$69.38</td><td class="mono">$67.34</td>
           <td><div class="first-date"><span class="date-dot"></span>2018-12-31</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://cisco.com" target="_blank">cisco.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">UPPP</span></td>
-          <td style="text-align:left"><div class="cell-name">Company U</div></td>
+          <td><span class="ticker">AMZN</span></td>
+          <td style="text-align:left"><div class="cell-name">Amazon.com, Inc.</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Internet Retail</td>
-          <td class="mono">487,400</td><td class="mono"><span class="blurred">$107M</span></td><td class="mono"><span class="blurred">$219.39</span></td><td class="mono"><span class="blurred">$238.24</span></td>
+          <td class="mono"><span class="blurred">487,400</td></td></span></td><td class="mono"><span class="blurred">$107M</td></td></span></td><td class="mono">$219.39</td><td class="mono">$238.24</td>
           <td><div class="first-date"><span class="date-dot"></span>2023-03-31</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://amazon.com" target="_blank">amazon.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">WRRR</span></td>
-          <td style="text-align:left"><div class="cell-name">Company W</div></td>
+          <td><span class="ticker">NVDA</span></td>
+          <td style="text-align:left"><div class="cell-name">NVIDIA Corporation</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Semiconductors</td>
-          <td class="mono">397,600</td><td class="mono"><span class="blurred">$63M</span></td><td class="mono"><span class="blurred">$157.99</span></td><td class="mono"><span class="blurred">$170.76</span></td>
+          <td class="mono"><span class="blurred">397,600</td></td></span></td><td class="mono"><span class="blurred">$63M</td></td></span></td><td class="mono">$157.99</td><td class="mono">$170.76</td>
           <td><div class="first-date"><span class="date-dot"></span>2022-06-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://nvidia.com" target="_blank">nvidia.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">XSSS</span></td>
-          <td style="text-align:left"><div class="cell-name">Company X</div></td>
+          <td><span class="ticker">CRM</span></td>
+          <td style="text-align:left"><div class="cell-name">Salesforce, Inc.</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Software - Application</td>
-          <td class="mono">338,200</td><td class="mono"><span class="blurred">$92M</span></td><td class="mono"><span class="blurred">$272.69</span></td><td class="mono"><span class="blurred">$252.06</span></td>
+          <td class="mono"><span class="blurred">338,200</td></td></span></td><td class="mono"><span class="blurred">$92M</td></td></span></td><td class="mono">$272.69</td><td class="mono">$252.06</td>
           <td><div class="first-date"><span class="date-dot"></span>2020-09-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://salesforce.com" target="_blank">salesforce.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">YTTT</span></td>
-          <td style="text-align:left"><div class="cell-name">Company Y</div></td>
+          <td><span class="ticker">MDT</span></td>
+          <td style="text-align:left"><div class="cell-name">Medtronic plc</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Medical Devices</td>
-          <td class="mono">281,000</td><td class="mono"><span class="blurred">$24M</span></td><td class="mono"><span class="blurred">$87.17</span></td><td class="mono"><span class="blurred">$94.07</span></td>
+          <td class="mono"><span class="blurred">281,000</td></td></span></td><td class="mono"><span class="blurred">$24M</td></td></span></td><td class="mono">$87.17</td><td class="mono">$94.07</td>
           <td><div class="first-date"><span class="date-dot"></span>2019-06-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://medtronic.com" target="_blank">medtronic.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">AAXX</span></td>
-          <td style="text-align:left"><div class="cell-name">Company A</div></td>
+          <td><span class="ticker">AAPL</span></td>
+          <td style="text-align:left"><div class="cell-name">Apple Inc.</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Consumer Electronics</td>
-          <td class="mono">198,800</td><td class="mono"><span class="blurred">$41M</span></td><td class="mono"><span class="blurred">$205.17</span></td><td class="mono"><span class="blurred">$234.35</span></td>
+          <td class="mono"><span class="blurred">198,800</td></td></span></td><td class="mono"><span class="blurred">$41M</td></td></span></td><td class="mono">$205.17</td><td class="mono">$234.35</td>
           <td><div class="first-date"><span class="date-dot"></span>2016-12-31</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://apple.com" target="_blank">apple.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">ZUUU</span></td>
-          <td style="text-align:left"><div class="cell-name">Company Z</div></td>
+          <td><span class="ticker">GOOGL</span></td>
+          <td style="text-align:left"><div class="cell-name">Alphabet Inc.</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Internet Content</td>
-          <td class="mono">181,600</td><td class="mono"><span class="blurred">$32M</span></td><td class="mono"><span class="blurred">$176.23</span></td><td class="mono"><span class="blurred">$239.63</span></td>
+          <td class="mono"><span class="blurred">181,600</td></td></span></td><td class="mono"><span class="blurred">$32M</td></td></span></td><td class="mono">$176.23</td><td class="mono">$239.63</td>
           <td><div class="first-date"><span class="date-dot"></span>2023-06-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://abc.xyz" target="_blank">abc.xyz ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">AAVVV</span></td>
-          <td style="text-align:left"><div class="cell-name">Company AA</div></td>
+          <td><span class="ticker">BDX</span></td>
+          <td style="text-align:left"><div class="cell-name">Becton, Dickinson</div></td>
           <td><span class="badge badge-cons">B. Consensus</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Medical Instruments</td>
-          <td class="mono">63,600</td><td class="mono"><span class="blurred">$11M</span></td><td class="mono"><span class="blurred">$172.25</span></td><td class="mono"><span class="blurred">$190.49</span></td>
+          <td class="mono"><span class="blurred">63,600</td></td></span></td><td class="mono"><span class="blurred">$11M</td></td></span></td><td class="mono">$172.25</td><td class="mono">$190.49</td>
           <td><div class="first-date"><span class="date-dot"></span>2021-09-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://bd.com" target="_blank">bd.com ↗</a></td>
         </tr>
         <tr>
-          <td><span class="ticker">BBWWW</span></td>
-          <td style="text-align:left"><div class="cell-name">Company BB</div></td>
+          <td><span class="ticker">META</span></td>
+          <td style="text-align:left"><div class="cell-name">Meta Platforms, Inc.</div></td>
           <td><span class="badge badge-conv">A. Conviction</span></td>
           <td style="text-align:left; color:var(--muted); font-size:10.5px;">Internet Content</td>
-          <td class="mono">600</td><td class="mono"><span class="blurred">$0M</span></td><td class="mono"><span class="blurred">$738.09</span></td><td class="mono"><span class="blurred">$765.70</span></td>
+          <td class="mono">600</td><td class="mono"><span class="blurred">$0M</td></td></span></td><td class="mono">$738.09</td><td class="mono">$765.70</td>
           <td><div class="first-date"><span class="date-dot" style="background:var(--gold);"></span>2024-09-30</div></td>
-          <td><a class="link-cell" href="#" target="_blank">[REDACTED] ↗</a></td>
+          <td><a class="link-cell" href="https://meta.com" target="_blank">meta.com ↗</a></td>
         </tr>
       </tbody>
       <tfoot><tr>
         <td>Total</td><td style="text-align:left"></td><td></td><td></td>
-        <td>5,756,022</td><td><span class="blurred">$630M</span></td><td><span class="blurred">$187.78</span></td><td><span class="blurred">$181.83</span></td><td colspan="2"></td>
+        <td>5,756,022</td><td>$630M</td><td>$187.78</td><td>$181.83</td><td colspan="2"></td>
       </tr></tfoot>
     </table>
     <div style="margin-top:14px; font-size:10px; color:var(--muted); font-style:italic;">
@@ -1325,7 +2234,7 @@ canvas { max-width: 100%; }
   </div>
   <div class="page-footer">
     <span class="pf-note">Informational only — not investment advice. Based on public SEC 13F filings.</span>
-    <span class="pf-badge">Confidential · Page 6</span>
+    <span class="pf-badge">Confidential · Page 9 of 11 of 11</span>
   </div>
 </div>
 
@@ -1338,9 +2247,9 @@ canvas { max-width: 100%; }
     <div class="ph-left">
       <div class="ph-eyebrow">Quarter-on-Quarter Change</div>
       <div class="ph-title">Portfolio Change vs Last Quarter</div>
-      <div class="ph-sub">Institution Alpha · Q1 2025 → Q2 2025 · as of June 30, 2025</div>
+      <div class="ph-sub">Berkshire Hathaway Inc · Q1 2025 → Q2 2025 · as of June 30, 2025</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">07 / 09</div></div>
+    <div class="ph-right"><div class="ph-page-num">08 / 11</div></div>
   </div>
   <div class="page-body">
 
@@ -1350,25 +2259,25 @@ canvas { max-width: 100%; }
         <div class="cs-tag">Buy / Increased</div>
         <div class="cs-num">4</div>
         <div class="cs-lbl">New or enlarged positions</div>
-        <div class="cs-val">+<span class="blurred">$5.8B</span> net added</div>
+        <div class="cs-val">+$5.8B net added</div>
       </div>
       <div class="cs-card hold">
         <div class="cs-tag">Hold / Unchanged</div>
         <div class="cs-num">31</div>
         <div class="cs-lbl">No share count change</div>
-        <div class="cs-val"><span class="blurred">$163.4B</span> maintained</div>
+        <div class="cs-val">$163.4B maintained</div>
       </div>
       <div class="cs-card sell">
         <div class="cs-tag">Sell / Reduced</div>
         <div class="cs-num">4</div>
         <div class="cs-lbl">Trimmed positions</div>
-        <div class="cs-val">−<span class="blurred">$8.1B</span> net removed</div>
+        <div class="cs-val">−$8.1B net removed</div>
       </div>
       <div class="cs-card exit">
         <div class="cs-tag">Exit / Closed</div>
         <div class="cs-num">2</div>
         <div class="cs-lbl">Fully closed positions</div>
-        <div class="cs-val">−<span class="blurred">$189M</span> divested</div>
+        <div class="cs-val">−$189M divested</div>
       </div>
     </div>
 
@@ -1381,10 +2290,10 @@ canvas { max-width: 100%; }
       <table class="data-table" style="border-top:none;">
         <thead><tr><th style="text-align:left">Company</th><th>Sector</th><th>Shares Held (Q2)</th><th>Quarter Change</th><th>Value (USD)</th></tr></thead>
         <tbody>
-          <tr><td style="text-align:left"><span class="ticker">IFFF</span> <span class="cell-name" style="margin-left:8px;">Company I</span></td><td style="color:var(--muted);font-size:10.5px;">Energy</td><td class="mono">248,019,000</td><td><span class="pos mono">+12,500,000</span></td><td class="mono"><span class="blurred">$14.2B</span></td></tr>
-          <tr><td style="text-align:left"><span class="ticker">JGGG</span> <span class="cell-name" style="margin-left:8px;">Company J</span></td><td style="color:var(--muted);font-size:10.5px;">Financial Svcs</td><td class="mono">9,999,600</td><td><span class="badge badge-gold">★ New Position</span></td><td class="mono"><span class="blurred">$1.9B</span></td></tr>
-          <tr><td style="text-align:left"><span class="ticker">BXXX</span> <span class="cell-name" style="margin-left:8px;">Company B</span></td><td style="color:var(--muted);font-size:10.5px;">Financial Svcs</td><td class="mono">151,610,700</td><td><span class="pos mono">+2,200,000</span></td><td class="mono"><span class="blurred">$41.1B</span></td></tr>
-          <tr><td style="text-align:left"><span class="ticker">KEEE</span> <span class="cell-name" style="margin-left:8px;">Company K</span></td><td style="color:var(--muted);font-size:10.5px;">Comm. Services</td><td class="mono">1,226,000,000</td><td><span class="badge badge-gold">★ New Position</span></td><td class="mono"><span class="blurred">$2.7B</span></td></tr>
+          <tr><td style="text-align:left"><span class="ticker">OXY</span> <span class="cell-name" style="margin-left:8px;">Occidental Petroleum</span></td><td style="color:var(--muted);font-size:10.5px;">Energy</td><td class="mono"><span class="blurred">248,019,000</td></td></span></td><td><span class="pos mono">+12,500,000</span></td><td class="mono">$14.2B</td></tr>
+          <tr><td style="text-align:left"><span class="ticker">COF</span> <span class="cell-name" style="margin-left:8px;">Capital One Financial</span></td><td style="color:var(--muted);font-size:10.5px;">Financial Svcs</td><td class="mono"><span class="blurred">9,999,600</td></td></span></td><td><span class="badge badge-gold">★ New Position</span></td><td class="mono">$1.9B</td></tr>
+          <tr><td style="text-align:left"><span class="ticker">AXP</span> <span class="cell-name" style="margin-left:8px;">American Express</span></td><td style="color:var(--muted);font-size:10.5px;">Financial Svcs</td><td class="mono"><span class="blurred">151,610,700</td></td></span></td><td><span class="pos mono">+2,200,000</span></td><td class="mono">$41.1B</td></tr>
+          <tr><td style="text-align:left"><span class="ticker">SIRI</span> <span class="cell-name" style="margin-left:8px;">Sirius XM Holdings</span></td><td style="color:var(--muted);font-size:10.5px;">Comm. Services</td><td class="mono"><span class="blurred">1,226,000,000</td></td></span></td><td><span class="badge badge-gold">★ New Position</span></td><td class="mono">$2.7B</td></tr>
         </tbody>
       </table>
     </div>
@@ -1394,7 +2303,7 @@ canvas { max-width: 100%; }
       <div class="hold-num">31</div>
       <div class="hold-text">
         <h4>Hold / Unchanged Positions</h4>
-        <p>31 securities showed no change in share count between Q1 and Q2 2025. These positions represent a combined holding value of approximately <strong><span class="blurred">$163.4B</span></strong> and include major stakes such as Apple, Bank of America, and Coca-Cola. Full details are available in the complete portfolio table.</p>
+        <p>31 securities showed no change in share count between Q1 and Q2 2025. These positions represent a combined holding value of approximately <strong>$163.4B</strong> and include major stakes such as Apple, Bank of America, and Coca-Cola. Full details are available in the complete portfolio table.</p>
       </div>
     </div>
 
@@ -1407,10 +2316,10 @@ canvas { max-width: 100%; }
       <table class="data-table" style="border-top:none;">
         <thead><tr><th style="text-align:left">Company</th><th>Sector</th><th>Shares Held (Q2)</th><th>Quarter Change</th><th>Value (USD)</th></tr></thead>
         <tbody>
-          <tr><td style="text-align:left"><span class="ticker">AAXX</span> <span class="cell-name" style="margin-left:8px;">Company A</span></td><td style="color:var(--muted);font-size:10.5px;">Technology</td><td class="mono">400,000,000</td><td><span class="neg mono">−115,000,000</span></td><td class="mono"><span class="blurred">$87.4B</span></td></tr>
-          <tr><td style="text-align:left"><span class="ticker">CYYY</span> <span class="cell-name" style="margin-left:8px;">Bank of America</span></td><td style="color:var(--muted);font-size:10.5px;">Financial Svcs</td><td class="mono">790,000,000</td><td><span class="neg mono">−148,000,000</span></td><td class="mono"><span class="blurred">$30.3B</span></td></tr>
-          <tr><td style="text-align:left"><span class="ticker">OJJJ</span> <span class="cell-name" style="margin-left:8px;">Company O</span></td><td style="color:var(--muted);font-size:10.5px;">Consumer Cyclical</td><td class="mono">690,106</td><td><span class="neg mono">−96,000</span></td><td class="mono"><span class="blurred">$243M</span></td></tr>
-          <tr><td style="text-align:left"><span class="ticker">PKKK</span> <span class="cell-name" style="margin-left:8px;">Company P</span></td><td style="color:var(--muted);font-size:10.5px;">Healthcare</td><td class="mono">36,000,000</td><td><span class="neg mono">−1,400,000</span></td><td class="mono"><span class="blurred">$5.5B</span></td></tr>
+          <tr><td style="text-align:left"><span class="ticker">AAPL</span> <span class="cell-name" style="margin-left:8px;">Apple Inc.</span></td><td style="color:var(--muted);font-size:10.5px;">Technology</td><td class="mono"><span class="blurred">400,000,000</td></td></span></td><td><span class="neg mono">−115,000,000</span></td><td class="mono">$87.4B</td></tr>
+          <tr><td style="text-align:left"><span class="ticker">BAC</span> <span class="cell-name" style="margin-left:8px;">Bank of America</span></td><td style="color:var(--muted);font-size:10.5px;">Financial Svcs</td><td class="mono"><span class="blurred">790,000,000</td></td></span></td><td><span class="neg mono">−148,000,000</span></td><td class="mono">$30.3B</td></tr>
+          <tr><td style="text-align:left"><span class="ticker">ULTA</span> <span class="cell-name" style="margin-left:8px;">Ulta Beauty</span></td><td style="color:var(--muted);font-size:10.5px;">Consumer Cyclical</td><td class="mono"><span class="blurred">690,106</td></td></span></td><td><span class="neg mono">−96,000</span></td><td class="mono"><span class="blurred">$243M</td></td></span></td></tr>
+          <tr><td style="text-align:left"><span class="ticker">DVA</span> <span class="cell-name" style="margin-left:8px;">DaVita Inc.</span></td><td style="color:var(--muted);font-size:10.5px;">Healthcare</td><td class="mono"><span class="blurred">36,000,000</td></td></span></td><td><span class="neg mono">−1,400,000</span></td><td class="mono">$5.5B</td></tr>
         </tbody>
       </table>
     </div>
@@ -1424,8 +2333,8 @@ canvas { max-width: 100%; }
       <table class="data-table" style="border-top:none;">
         <thead><tr><th style="text-align:left">Company</th><th>Sector</th><th>Shares Held (Q1)</th><th>Status</th><th>Last Known Value</th></tr></thead>
         <tbody>
-          <tr><td style="text-align:left"><span class="ticker">MHHH</span> <span class="cell-name" style="margin-left:8px;">Company M</span></td><td style="color:var(--muted);font-size:10.5px;">Technology</td><td class="mono">3,921,000</td><td><span class="badge badge-exit">✕ Full Exit</span></td><td class="mono"><span class="blurred">$138M</span></td></tr>
-          <tr><td style="text-align:left"><span class="ticker">NIII</span> <span class="cell-name" style="margin-left:8px;">Company N</span></td><td style="color:var(--muted);font-size:10.5px;">Consumer Def.</td><td class="mono">315,400</td><td><span class="badge badge-exit">✕ Full Exit</span></td><td class="mono"><span class="blurred">$51M</span></td></tr>
+          <tr><td style="text-align:left"><span class="ticker">HPQ</span> <span class="cell-name" style="margin-left:8px;">HP Inc.</span></td><td style="color:var(--muted);font-size:10.5px;">Technology</td><td class="mono"><span class="blurred">3,921,000</td></td></span></td><td><span class="badge badge-exit">✕ Full Exit</span></td><td class="mono"><span class="blurred">$138M</td></td></span></td></tr>
+          <tr><td style="text-align:left"><span class="ticker">PG</span> <span class="cell-name" style="margin-left:8px;">Procter & Gamble</span></td><td style="color:var(--muted);font-size:10.5px;">Consumer Def.</td><td class="mono"><span class="blurred">315,400</td></td></span></td><td><span class="badge badge-exit">✕ Full Exit</span></td><td class="mono"><span class="blurred">$51M</td></td></span></td></tr>
         </tbody>
       </table>
     </div>
@@ -1436,7 +2345,7 @@ canvas { max-width: 100%; }
   </div>
   <div class="page-footer">
     <span class="pf-note">Informational only — not investment advice. Based on public SEC 13F filings.</span>
-    <span class="pf-badge">Confidential · Page 7</span>
+    <span class="pf-badge">Confidential · Page 9 of 11</span>
   </div>
 </div>
 
@@ -1448,18 +2357,18 @@ canvas { max-width: 100%; }
   <div class="page-header">
     <div class="ph-left">
       <div class="ph-eyebrow">Company Summary</div>
-      <div class="ph-title">Company L (DEO)</div>
+      <div class="ph-title">Diageo plc (DEO)</div>
       <div class="ph-sub">Consumer Defensive · Beverages — Wineries & Distilleries · United Kingdom</div>
     </div>
-    <div class="ph-right"><div class="ph-page-num">08 / 09</div></div>
+    <div class="ph-right"><div class="ph-page-num">09 / 11</div></div>
   </div>
   <div class="page-body">
 
     <!-- Hero -->
     <div class="company-hero" style="margin-bottom:20px;">
       <div style="flex:1;">
-        <div class="ch-name">Company L</div>
-        <div class="ch-ticker">NYSE: DEO &nbsp;·&nbsp; <a href="#" target="_blank" style="color:var(--gold);text-decoration:none;">[REDACTED] ↗</a></div>
+        <div class="ch-name">Diageo plc</div>
+        <div class="ch-ticker">NYSE: DEO &nbsp;·&nbsp; <a href="https://diageo.com" target="_blank" style="color:var(--gold);text-decoration:none;">diageo.com ↗</a></div>
         <div class="ch-meta-grid">
           <div class="ch-meta-item"><div class="cml">Classification</div><div class="cmv">B. Consensus</div></div>
           <div class="ch-meta-item"><div class="cml">Sector</div><div class="cmv">Consumer Defensive</div></div>
@@ -1475,25 +2384,25 @@ canvas { max-width: 100%; }
         <div style="font-size:9px;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-bottom:4px;">INVESTORS</div>
         <div style="font-family:'DM Serif Display',serif;font-size:44px;color:white;line-height:1;">47</div>
         <div style="font-size:10px;color:rgba(255,255,255,0.5);">97,894 avg. shares held</div>
-        <div style="font-size:10px;color:rgba(255,255,255,0.5);"><span class="blurred">$99.27</span> avg. purchase price</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.5);">$99.27 avg. purchase price</div>
       </div>
     </div>
 
     <!-- Price strip -->
     <div class="price-strip" style="margin-bottom:20px;">
-      <div class="price-cell"><div class="price-lbl">Last Close</div><div class="price-val"><span class="blurred">$104.99</span></div></div>
+      <div class="price-cell"><div class="price-lbl">Last Close</div><div class="price-val">$104.99</div></div>
       <div class="price-cell"><div class="price-lbl">Avg. Volume</div><div class="price-val">1,214,191</div></div>
-      <div class="price-cell"><div class="price-lbl">50-day Avg.</div><div class="price-val"><span class="blurred">$106.92</span></div></div>
+      <div class="price-cell"><div class="price-lbl">50-day Avg.</div><div class="price-val">$106.92</div></div>
       <div class="price-cell"><div class="price-lbl">50-day Change</div><div class="price-val neg">−2.45%</div></div>
-      <div class="price-cell"><div class="price-lbl">52-week Low</div><div class="price-val"><span class="blurred">$96.45</span></div></div>
-      <div class="price-cell"><div class="price-lbl">52-week High</div><div class="price-val"><span class="blurred">$142.73</span></div></div>
-      <div class="price-cell"><div class="price-lbl">200-day Avg.</div><div class="price-val"><span class="blurred">$111.71</span></div></div>
+      <div class="price-cell"><div class="price-lbl">52-week Low</div><div class="price-val">$96.45</div></div>
+      <div class="price-cell"><div class="price-lbl">52-week High</div><div class="price-val">$142.73</div></div>
+      <div class="price-cell"><div class="price-lbl">200-day Avg.</div><div class="price-val">$111.71</div></div>
       <div class="price-cell" style="border-right:none;"><div class="price-lbl">200-day Change</div><div class="price-val neg">−6.64%</div></div>
     </div>
 
     <!-- Biz summary -->
     <div class="biz-box" style="margin-bottom:20px;">
-      Company L, together with its subsidiaries, engages in the production, marketing, and sale of alcoholic beverages in North America, Europe, the Asia Pacific, Latin America and Caribbean, and Africa. Brands include Johnnie Walker, Crown Royal, Smirnoff, Ciroc, Ketel One, Captain Morgan, Baileys, Don Julio, Casamigos, Tanqueray, and Guinness. Formerly known as Guinness plc; renamed Diageo in February 1998. Headquartered in London, United Kingdom.
+      Diageo plc, together with its subsidiaries, engages in the production, marketing, and sale of alcoholic beverages in North America, Europe, the Asia Pacific, Latin America and Caribbean, and Africa. Brands include Johnnie Walker, Crown Royal, Smirnoff, Ciroc, Ketel One, Captain Morgan, Baileys, Don Julio, Casamigos, Tanqueray, and Guinness. Formerly known as Guinness plc; renamed Diageo in February 1998. Headquartered in London, United Kingdom.
     </div>
 
     <!-- Charts + table -->
@@ -1515,26 +2424,698 @@ canvas { max-width: 100%; }
             <th>Shares Held</th><th>Value (USD)</th><th>Avg. Price</th><th>First Investment</th>
           </tr></thead>
           <tbody>
-            <tr><td style="text-align:left; font-size:11px;">Investor 1</td><td class="mono">1,267,586</td><td class="mono"><span class="blurred">$127.82M</span></td><td class="mono"><span class="blurred">$100.76</span></td><td class="mono" style="font-size:10px;">31-03-2023</td></tr>
-            <tr><td style="text-align:left; font-size:11px;">Investor 2</td><td class="mono">536,289</td><td class="mono"><span class="blurred">$54.08M</span></td><td class="mono"><span class="blurred">$100.83</span></td><td class="mono" style="font-size:10px;">30-09-2022</td></tr>
-            <tr><td style="text-align:left; font-size:11px;">Investor 3</td><td class="mono">70,179</td><td class="mono"><span class="blurred">$7.08M</span></td><td class="mono"><span class="blurred">$100.84</span></td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
-            <tr><td style="text-align:left; font-size:11px;">Investor 4</td><td class="mono">28,534</td><td class="mono"><span class="blurred">$2.87M</span></td><td class="mono"><span class="blurred">$100.64</span></td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
-            <tr><td style="text-align:left; font-size:11px;">Investor 5</td><td class="mono">29,171</td><td class="mono"><span class="blurred">$2.94M</span></td><td class="mono"><span class="blurred">$100.80</span></td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
-            <tr><td style="text-align:left; font-size:11px;">Investor 6</td><td class="mono">7,020</td><td class="mono"><span class="blurred">$0.71M</span></td><td class="mono"><span class="blurred">$100.84</span></td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
-            <tr><td style="text-align:left; font-size:11px;">Investor 7</td><td class="mono">11,316</td><td class="mono"><span class="blurred">$0.00M</span></td><td class="mono"><span class="blurred">$0.10</span></td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
+            <tr><td style="text-align:left; font-size:11px;">Royal Bank of Canada</td><td class="mono"><span class="blurred">1,267,586</td></td></span></td><td class="mono">$127.82M</td><td class="mono">$100.76</td><td class="mono" style="font-size:10px;">31-03-2023</td></tr>
+            <tr><td style="text-align:left; font-size:11px;">Bank of Montreal</td><td class="mono"><span class="blurred">536,289</td></td></span></td><td class="mono">$54.08M</td><td class="mono">$100.83</td><td class="mono" style="font-size:10px;">30-09-2022</td></tr>
+            <tr><td style="text-align:left; font-size:11px;">Franklin Resources, Inc.</td><td class="mono"><span class="blurred">70,179</td></td></span></td><td class="mono">$7.08M</td><td class="mono">$100.84</td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
+            <tr><td style="text-align:left; font-size:11px;">Jones Financial Companies</td><td class="mono"><span class="blurred">28,534</td></td></span></td><td class="mono">$2.87M</td><td class="mono">$100.64</td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
+            <tr><td style="text-align:left; font-size:11px;">M&T Bank Corporation</td><td class="mono"><span class="blurred">29,171</td></td></span></td><td class="mono">$2.94M</td><td class="mono">$100.80</td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
+            <tr><td style="text-align:left; font-size:11px;">Northwest Bancshares</td><td class="mono">7,020</td><td class="mono">$0.71M</td><td class="mono">$100.84</td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
+            <tr><td style="text-align:left; font-size:11px;">T. Rowe Price Associates</td><td class="mono"><span class="blurred">11,316</td></td></span></td><td class="mono">$0.00M</td><td class="mono">$0.10</td><td class="mono" style="font-size:10px;">31-12-2022</td></tr>
           </tbody>
-          <tfoot><tr><td style="text-align:left">Total</td><td>18,012,489</td><td><span class="blurred">$1,847.76M</span></td><td><span class="blurred">$99.27</span></td><td>31-12-2017</td></tr></tfoot>
+          <tfoot><tr><td style="text-align:left">Total</td><td>18,012,489</td><td>$1,847.76M</td><td>$99.27</td><td>31-12-2017</td></tr></tfoot>
         </table>
       </div>
     </div>
   </div>
   <div class="page-footer">
     <span class="pf-note">Informational only — not investment advice. Based on public SEC 13F filings. Past performance is not indicative of future results.</span>
-    <span class="pf-badge">Confidential · Page 8 of 9</span>
+    <span class="pf-badge">Confidential · Page 9 of 11 of 9</span>
   </div>
 </div>
 
 
+
+
+<!-- ══════════════════════════════════════════════
+     SCREENER PAGE — STOCK SCREENER
+════════════════════════════════════════════════ -->
+<div class="page landscape" id="p-screener">
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div>
+    <div class="ph-eyebrow">Stock Screener</div>
+    <div class="ph-title">Screen Stocks by Institutional Activity</div>
+    <div class="ph-sub">Filter by sector, country, market cap, revenue growth and institutional ownership · Q2 2025</div>
+  </div>
+  <div class="ph-right">
+    <div class="ph-page-num">09 / 11</div>
+    <div style="font-size:9px;color:rgba(255,255,255,0.25);margin-top:4px;" id="result-count-header">20 stocks</div>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <!-- ── FILTER PANEL ── -->
+  <div class="filter-panel">
+    <div class="filter-panel-top">
+      <div class="fp-title">🔍 &nbsp;Filters</div>
+      <button class="fp-reset" onclick="resetAll()">✕ Reset all filters</button>
+    </div>
+    <div class="filter-rows">
+
+      <!-- Country — pills -->
+      <div class="fg">
+        <div class="fg-label">Country</div>
+        <div class="pill-group" id="f-country">
+          <div class="pill active" data-val="all">All</div>
+          <div class="pill" data-val="US">🇺🇸 US</div>
+          <div class="pill" data-val="IE">🇮🇪 Ireland</div>
+          <div class="pill" data-val="CA">🇨🇦 Canada</div>
+          <div class="pill" data-val="UK">🇬🇧 UK</div>
+          <div class="pill" data-val="DK">🇩🇰 Denmark</div>
+          <div class="pill" data-val="CH">🇨🇭 Switzerland</div>
+        </div>
+      </div>
+
+      <!-- Market Cap — pills -->
+      <div class="fg">
+        <div class="fg-label">Market Cap</div>
+        <div class="pill-group" id="f-cap">
+          <div class="pill active" data-val="all">All</div>
+          <div class="pill" data-val="large">Large Cap</div>
+          <div class="pill" data-val="mid">Mid Cap</div>
+          <div class="pill" data-val="small">Small Cap</div>
+        </div>
+      </div>
+
+      <!-- Sector — pills -->
+      <div class="fg">
+        <div class="fg-label">Sector</div>
+        <div class="pill-group" id="f-sector">
+          <div class="pill active" data-val="all">All</div>
+          <div class="pill" data-val="Technology">Technology</div>
+          <div class="pill" data-val="Financial Services">Financial Services</div>
+          <div class="pill" data-val="Healthcare">Healthcare</div>
+          <div class="pill" data-val="Consumer Defensive">Consumer Defensive</div>
+          <div class="pill" data-val="Industrials">Industrials</div>
+          <div class="pill" data-val="Energy">Energy</div>
+          <div class="pill" data-val="Comm. Services">Comm. Services</div>
+        </div>
+      </div>
+
+      <!-- Industry — dropdown -->
+      <div class="fg">
+        <div class="fg-label">Industry</div>
+        <select class="range-select" id="f-industry" onchange="applyFilters()">
+          <option value="all">All industries</option>
+          <option value="Semiconductors">Semiconductors</option>
+          <option value="Software">Software</option>
+          <option value="Consumer Electronics">Consumer Electronics</option>
+          <option value="Banks - Diversified">Banks — Diversified</option>
+          <option value="Credit Services">Credit Services</option>
+          <option value="Financial Data">Financial Data</option>
+          <option value="Medical Devices">Medical Devices</option>
+          <option value="Healthcare Plans">Healthcare Plans</option>
+          <option value="Packaged Foods">Packaged Foods</option>
+          <option value="Grocery Stores">Grocery Stores</option>
+          <option value="Railroads">Railroads</option>
+          <option value="Telecom Services">Telecom Services</option>
+          <option value="Oil & Gas E&P">Oil & Gas E&P</option>
+          <option value="Beverages">Beverages</option>
+        </select>
+      </div>
+
+      <!-- YoY Revenue — dropdown -->
+      <div class="fg">
+        <div class="fg-label">YoY Revenue Growth</div>
+        <select class="range-select" id="f-yoy" onchange="applyFilters()">
+          <option value="all">Any growth</option>
+          <option value="positive">Positive (&gt; 0%)</option>
+          <option value="gt5">Strong (&gt; 5%)</option>
+          <option value="gt10">High (&gt; 10%)</option>
+          <option value="negative">Declining (&lt; 0%)</option>
+        </select>
+      </div>
+
+      <!-- Institutional investors — dropdown -->
+      <div class="fg">
+        <div class="fg-label">Institutional Investors</div>
+        <select class="range-select" id="f-inst" onchange="applyFilters()">
+          <option value="all">Any count</option>
+          <option value="gt1">At least 2</option>
+          <option value="gt4">At least 5</option>
+          <option value="gt9">10 or more</option>
+          <option value="gt14">15 or more</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ACTIVE FILTERS + RESULT COUNT -->
+  <div class="results-bar">
+    <div class="rb-count"><strong id="visible-count">20</strong> stocks match your filters</div>
+    <div class="rb-tags" id="active-tags"></div>
+  </div>
+
+  <!-- ── SCREENER TABLE ── -->
+  <table class="data-table" id="screener-table">
+    <thead>
+      <tr>
+        <th>Ticker</th>
+        <th>Company</th>
+        <th>Sector</th>
+        <th>Industry</th>
+        <th>Country</th>
+        <th>Market Cap</th>
+        <th class="sortable" onclick="sortTable('yoy')">YoY Revenue <span class="sort-arrow"></span></th>
+        <th class="sortable" onclick="sortTable('inst')">Inst. Investors <span class="sort-arrow"></span></th>
+        <th class="sortable" onclick="sortTable('value')">Value (USD) <span class="sort-arrow"></span></th>
+      </tr>
+    </thead>
+    <tbody id="screener-body">
+      <!-- data-country, data-cap, data-sector, data-industry, data-yoy (float), data-inst (int) -->
+      <tr data-country="US" data-cap="large" data-sector="Technology" data-industry="Consumer Electronics" data-yoy="8.2" data-inst="7">
+        <td><span class="ticker">AAPL</span></td>
+        <td><div class="cell-name">Apple Inc.</div><div class="cell-sub">Consumer Electronics</div></td>
+        <td style="color:var(--muted);font-size:10px;">Technology</td>
+        <td style="color:var(--muted);font-size:10px;">Consumer Electronics</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+8.2%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:70%"></div></div><span class="inst-bar-num">7</span></div></td>
+        <td class="mono">$57,448M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Financial Services" data-industry="Credit Services" data-yoy="9.1" data-inst="6">
+        <td><span class="ticker">AXP</span></td>
+        <td><div class="cell-name">American Express</div><div class="cell-sub">Credit Services</div></td>
+        <td style="color:var(--muted);font-size:10px;">Financial Services</td>
+        <td style="color:var(--muted);font-size:10px;">Credit Services</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+9.1%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:60%"></div></div><span class="inst-bar-num">6</span></div></td>
+        <td class="mono">$48,361M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Financial Services" data-industry="Banks - Diversified" data-yoy="3.4" data-inst="8">
+        <td><span class="ticker">BAC</span></td>
+        <td><div class="cell-name">Bank of America</div><div class="cell-sub">Banks — Diversified</div></td>
+        <td style="color:var(--muted);font-size:10px;">Financial Services</td>
+        <td style="color:var(--muted);font-size:10px;">Banks — Diversified</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+3.4%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:80%"></div></div><span class="inst-bar-num">8</span></div></td>
+        <td class="mono">$28,641M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Financial Services" data-industry="Financial Data" data-yoy="11.3" data-inst="4">
+        <td><span class="ticker">MCO</span></td>
+        <td><div class="cell-name">Moody's Corporation</div><div class="cell-sub">Financial Data</div></td>
+        <td style="color:var(--muted);font-size:10px;">Financial Services</td>
+        <td style="color:var(--muted);font-size:10px;">Financial Data</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+11.3%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:40%"></div></div><span class="inst-bar-num">4</span></div></td>
+        <td class="mono">$12,374M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Consumer Defensive" data-industry="Packaged Foods" data-yoy="-2.1" data-inst="5">
+        <td><span class="ticker">KHC</span></td>
+        <td><div class="cell-name">Kraft Heinz</div><div class="cell-sub">Packaged Foods</div></td>
+        <td style="color:var(--muted);font-size:10px;">Consumer Defensive</td>
+        <td style="color:var(--muted);font-size:10px;">Packaged Foods</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono neg">−2.1%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:50%"></div></div><span class="inst-bar-num">5</span></div></td>
+        <td class="mono">$8,408M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Energy" data-industry="Oil & Gas E&P" data-yoy="4.8" data-inst="4">
+        <td><span class="ticker">OXY</span></td>
+        <td><div class="cell-name">Occidental Petroleum</div><div class="cell-sub">Oil & Gas E&P</div></td>
+        <td style="color:var(--muted);font-size:10px;">Energy</td>
+        <td style="color:var(--muted);font-size:10px;">Oil & Gas E&P</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+4.8%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:40%"></div></div><span class="inst-bar-num">4</span></div></td>
+        <td class="mono">$14,217M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Technology" data-industry="Software" data-yoy="7.4" data-inst="3">
+        <td><span class="ticker">VRSN</span></td>
+        <td><div class="cell-name">VeriSign Inc.</div><div class="cell-sub">Software — Infrastructure</div></td>
+        <td style="color:var(--muted);font-size:10px;">Technology</td>
+        <td style="color:var(--muted);font-size:10px;">Software</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+7.4%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:30%"></div></div><span class="inst-bar-num">3</span></div></td>
+        <td class="mono">$3,838M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Consumer Defensive" data-industry="Grocery Stores" data-yoy="5.9" data-inst="3">
+        <td><span class="ticker">KR</span></td>
+        <td><div class="cell-name">The Kroger Co.</div><div class="cell-sub">Grocery Stores</div></td>
+        <td style="color:var(--muted);font-size:10px;">Consumer Defensive</td>
+        <td style="color:var(--muted);font-size:10px;">Grocery Stores</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+5.9%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:30%"></div></div><span class="inst-bar-num">3</span></div></td>
+        <td class="mono">$3,587M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Financial Services" data-industry="Credit Services" data-yoy="12.4" data-inst="4">
+        <td><span class="ticker">V</span></td>
+        <td><div class="cell-name">Visa Inc.</div><div class="cell-sub">Credit Services</div></td>
+        <td style="color:var(--muted);font-size:10px;">Financial Services</td>
+        <td style="color:var(--muted);font-size:10px;">Credit Services</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+12.4%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:40%"></div></div><span class="inst-bar-num">4</span></div></td>
+        <td class="mono">$2,946M</td>
+      </tr>
+      <tr data-country="IE" data-cap="large" data-sector="Healthcare" data-industry="Medical Devices" data-yoy="3.2" data-inst="5">
+        <td><span class="ticker">MDT</span></td>
+        <td><div class="cell-name">Medtronic plc</div><div class="cell-sub">Medical Devices</div></td>
+        <td style="color:var(--muted);font-size:10px;">Healthcare</td>
+        <td style="color:var(--muted);font-size:10px;">Medical Devices</td>
+        <td class="mono">🇮🇪 IE</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+3.2%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:50%"></div></div><span class="inst-bar-num">5</span></div></td>
+        <td class="mono">$2,587M</td>
+      </tr>
+      <tr data-country="UK" data-cap="large" data-sector="Consumer Defensive" data-industry="Beverages" data-yoy="0.4" data-inst="47">
+        <td><span class="ticker">DEO</span></td>
+        <td><div class="cell-name">Diageo plc</div><div class="cell-sub">Beverages — Wineries & Distilleries</div></td>
+        <td style="color:var(--muted);font-size:10px;">Consumer Defensive</td>
+        <td style="color:var(--muted);font-size:10px;">Beverages</td>
+        <td class="mono">🇬🇧 UK</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+0.4%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:100%"></div></div><span class="inst-bar-num">47</span></div></td>
+        <td class="mono">$1,848M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Technology" data-industry="Semiconductors" data-yoy="-7.3" data-inst="3">
+        <td><span class="ticker">INTC</span></td>
+        <td><div class="cell-name">Intel Corporation</div><div class="cell-sub">Semiconductors</div></td>
+        <td style="color:var(--muted);font-size:10px;">Technology</td>
+        <td style="color:var(--muted);font-size:10px;">Semiconductors</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono neg">−7.3%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:30%"></div></div><span class="inst-bar-num">3</span></div></td>
+        <td class="mono">$17M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Technology" data-industry="Semiconductors" data-yoy="15.6" data-inst="2">
+        <td><span class="ticker">NVDA</span></td>
+        <td><div class="cell-name">NVIDIA Corporation</div><div class="cell-sub">Semiconductors</div></td>
+        <td style="color:var(--muted);font-size:10px;">Technology</td>
+        <td style="color:var(--muted);font-size:10px;">Semiconductors</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+15.6%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:20%"></div></div><span class="inst-bar-num">2</span></div></td>
+        <td class="mono">$63M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Technology" data-industry="Software" data-yoy="9.4" data-inst="2">
+        <td><span class="ticker">CRM</span></td>
+        <td><div class="cell-name">Salesforce Inc.</div><div class="cell-sub">Software — Application</div></td>
+        <td style="color:var(--muted);font-size:10px;">Technology</td>
+        <td style="color:var(--muted);font-size:10px;">Software</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+9.4%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:20%"></div></div><span class="inst-bar-num">2</span></div></td>
+        <td class="mono">$92M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Industrials" data-industry="Railroads" data-yoy="2.1" data-inst="3">
+        <td><span class="ticker">UNP</span></td>
+        <td><div class="cell-name">Union Pacific</div><div class="cell-sub">Railroads</div></td>
+        <td style="color:var(--muted);font-size:10px;">Industrials</td>
+        <td style="color:var(--muted);font-size:10px;">Railroads</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+2.1%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:30%"></div></div><span class="inst-bar-num">3</span></div></td>
+        <td class="mono">$3,526M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Healthcare" data-industry="Healthcare Plans" data-yoy="8.7" data-inst="5">
+        <td><span class="ticker">UNH</span></td>
+        <td><div class="cell-name">UnitedHealth Group</div><div class="cell-sub">Healthcare Plans</div></td>
+        <td style="color:var(--muted);font-size:10px;">Healthcare</td>
+        <td style="color:var(--muted);font-size:10px;">Healthcare Plans</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+8.7%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:50%"></div></div><span class="inst-bar-num">5</span></div></td>
+        <td class="mono">$2,587M</td>
+      </tr>
+      <tr data-country="CA" data-cap="large" data-sector="Industrials" data-industry="Railroads" data-yoy="4.3" data-inst="2">
+        <td><span class="ticker">NTR</span></td>
+        <td><div class="cell-name">Nutrien Ltd.</div><div class="cell-sub">Agricultural Inputs</div></td>
+        <td style="color:var(--muted);font-size:10px;">Industrials</td>
+        <td style="color:var(--muted);font-size:10px;">Railroads</td>
+        <td class="mono">🇨🇦 CA</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono pos">+4.3%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:20%"></div></div><span class="inst-bar-num">2</span></div></td>
+        <td class="mono">$25M</td>
+      </tr>
+      <tr data-country="US" data-cap="mid" data-sector="Technology" data-industry="Semiconductors" data-yoy="6.2" data-inst="2">
+        <td><span class="ticker">ON</span></td>
+        <td><div class="cell-name">ON Semiconductor</div><div class="cell-sub">Semiconductors</div></td>
+        <td style="color:var(--muted);font-size:10px;">Technology</td>
+        <td style="color:var(--muted);font-size:10px;">Semiconductors</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-mid">Mid Cap</span></td>
+        <td class="mono pos">+6.2%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:20%"></div></div><span class="inst-bar-num">2</span></div></td>
+        <td class="mono">$38M</td>
+      </tr>
+      <tr data-country="US" data-cap="small" data-sector="Financial Services" data-industry="Banks - Diversified" data-yoy="1.8" data-inst="1">
+        <td><span class="ticker">OZK</span></td>
+        <td><div class="cell-name">Bank OZK</div><div class="cell-sub">Banks — Regional</div></td>
+        <td style="color:var(--muted);font-size:10px;">Financial Services</td>
+        <td style="color:var(--muted);font-size:10px;">Banks — Regional</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-small">Small Cap</span></td>
+        <td class="mono pos">+1.8%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:10%"></div></div><span class="inst-bar-num">1</span></div></td>
+        <td class="mono">$33M</td>
+      </tr>
+      <tr data-country="US" data-cap="large" data-sector="Comm. Services" data-industry="Telecom Services" data-yoy="-1.2" data-inst="4">
+        <td><span class="ticker">VZ</span></td>
+        <td><div class="cell-name">Verizon Communications</div><div class="cell-sub">Telecom Services</div></td>
+        <td style="color:var(--muted);font-size:10px;">Comm. Services</td>
+        <td style="color:var(--muted);font-size:10px;">Telecom Services</td>
+        <td class="mono">🇺🇸 US</td>
+        <td><span class="badge-cap cap-large">Large Cap</span></td>
+        <td class="mono neg">−1.2%</td>
+        <td><div class="inst-bar"><div class="inst-bar-track"><div class="inst-bar-fill" style="width:40%"></div></div><span class="inst-bar-num">4</span></div></td>
+        <td class="mono">$7M</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="no-results" id="no-results">No stocks match the selected filters. Try adjusting your criteria.</div>
+
+</div><!-- /page-body -->
+
+<div class="page-footer">
+  <span class="pf-note">Informational only — not investment advice. Based on public SEC 13F filings. Dummy data for testing purposes.</span>
+  <span class="pf-badge">Confidential · Page 9</span>
+</div>
+
+<script>
+// ── FILTER STATE ──
+const state = {
+  country: 'all', cap: 'all', sector: 'all',
+  industry: 'all', yoy: 'all', inst: 'all'
+};
+
+// ── PILL GROUPS ──
+['country', 'cap', 'sector'].forEach(key => {
+  document.getElementById('f-' + key).querySelectorAll('.pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.getElementById('f-' + key).querySelectorAll('.pill')
+        .forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      state[key] = pill.dataset.val;
+      applyFilters();
+    });
+  });
+});
+
+function applyFilters() {
+  // Read dropdown values
+  state.industry = document.getElementById('f-industry').value;
+  state.yoy      = document.getElementById('f-yoy').value;
+  state.inst     = document.getElementById('f-inst').value;
+
+  // Style active dropdowns
+  ['industry','yoy','inst'].forEach(k => {
+    const el = document.getElementById('f-' + k);
+    el.classList.toggle('active', el.value !== 'all');
+  });
+
+  const rows = document.querySelectorAll('#screener-body tr');
+  let visible = 0;
+
+  rows.forEach(row => {
+    const show =
+      (state.country  === 'all' || row.dataset.country  === state.country)  &&
+      (state.cap      === 'all' || row.dataset.cap       === state.cap)      &&
+      (state.sector   === 'all' || row.dataset.sector    === state.sector)   &&
+      (state.industry === 'all' || row.dataset.industry  === state.industry) &&
+      yoyMatch(parseFloat(row.dataset.yoy), state.yoy)                       &&
+      instMatch(parseInt(row.dataset.inst),  state.inst);
+
+    row.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+
+  document.getElementById('visible-count').textContent  = visible;
+  document.getElementById('result-count-header').textContent = visible + ' stock' + (visible !== 1 ? 's' : '');
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+
+  updateActiveTags();
+}
+
+function yoyMatch(val, filter) {
+  if (filter === 'all')      return true;
+  if (filter === 'positive') return val > 0;
+  if (filter === 'gt5')      return val > 5;
+  if (filter === 'gt10')     return val > 10;
+  if (filter === 'negative') return val < 0;
+  return true;
+}
+
+function instMatch(val, filter) {
+  if (filter === 'all')   return true;
+  if (filter === 'gt1')   return val >= 2;
+  if (filter === 'gt4')   return val >= 5;
+  if (filter === 'gt9')   return val >= 10;
+  if (filter === 'gt14')  return val >= 15;
+  return true;
+}
+
+function updateActiveTags() {
+  const tags = document.getElementById('active-tags');
+  tags.innerHTML = '';
+  const labels = {
+    country: { US:'🇺🇸 US', IE:'🇮🇪 Ireland', CA:'🇨🇦 Canada', UK:'🇬🇧 UK', DK:'🇩🇰 Denmark', CH:'🇨🇭 Switzerland' },
+    cap:     { large:'Large Cap', mid:'Mid Cap', small:'Small Cap' },
+    yoy:     { positive:'Revenue > 0%', gt5:'Revenue > 5%', gt10:'Revenue > 10%', negative:'Revenue < 0%' },
+    inst:    { gt1:'≥ 2 investors', gt4:'≥ 5 investors', gt9:'≥ 10 investors', gt14:'≥ 15 investors' },
+  };
+
+  const add = (key, label) => {
+    const tag = document.createElement('div');
+    tag.className = 'rb-tag';
+    tag.innerHTML = `${label} <span class="rb-tag-x" onclick="clearFilter('${key}')">×</span>`;
+    tags.appendChild(tag);
+  };
+
+  if (state.country  !== 'all') add('country',  labels.country[state.country] || state.country);
+  if (state.cap      !== 'all') add('cap',       labels.cap[state.cap] || state.cap);
+  if (state.sector   !== 'all') add('sector',    state.sector);
+  if (state.industry !== 'all') add('industry',  state.industry);
+  if (state.yoy      !== 'all') add('yoy',       labels.yoy[state.yoy]);
+  if (state.inst     !== 'all') add('inst',      labels.inst[state.inst]);
+}
+
+function clearFilter(key) {
+  state[key] = 'all';
+  if (['country','cap','sector'].includes(key)) {
+    document.getElementById('f-' + key).querySelectorAll('.pill')
+      .forEach(p => p.classList.toggle('active', p.dataset.val === 'all'));
+  } else {
+    document.getElementById('f-' + key).value = 'all';
+  }
+  applyFilters();
+}
+
+function resetAll() {
+  ['country','cap','sector'].forEach(k => {
+    state[k] = 'all';
+    document.getElementById('f-' + k).querySelectorAll('.pill')
+      .forEach(p => p.classList.toggle('active', p.dataset.val === 'all'));
+  });
+  ['industry','yoy','inst'].forEach(k => {
+    state[k] = 'all';
+    document.getElementById('f-' + k).value = 'all';
+  });
+  applyFilters();
+}
+
+// ── SORT ──
+let sortCol = null, sortDir = 1;
+function sortTable(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+
+  document.querySelectorAll('.data-table thead th').forEach(th => {
+    th.classList.remove('sort-asc','sort-desc');
+  });
+  const idx = col === 'yoy' ? 6 : col === 'inst' ? 7 : 8;
+  const th = document.querySelectorAll('.data-table thead th')[idx];
+  th.classList.add(sortDir === 1 ? 'sort-desc' : 'sort-asc');
+
+  const tbody = document.getElementById('screener-body');
+  const rows  = [...tbody.querySelectorAll('tr')];
+  rows.sort((a, b) => {
+    const av = col === 'yoy'   ? parseFloat(a.dataset.yoy)
+             : col === 'inst'  ? parseInt(a.dataset.inst)
+             : parseFloat(a.querySelector('td:last-child').textContent.replace(/[^0-9.]/g,''));
+    const bv = col === 'yoy'   ? parseFloat(b.dataset.yoy)
+             : col === 'inst'  ? parseInt(b.dataset.inst)
+             : parseFloat(b.querySelector('td:last-child').textContent.replace(/[^0-9.]/g,''));
+    return (av - bv) * sortDir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+</script>
+<script>
+// ── FILTER STATE ──
+const state = {
+  country: 'all', cap: 'all', sector: 'all',
+  industry: 'all', yoy: 'all', inst: 'all'
+};
+
+// ── PILL GROUPS ──
+['country', 'cap', 'sector'].forEach(key => {
+  document.getElementById('f-' + key).querySelectorAll('.pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.getElementById('f-' + key).querySelectorAll('.pill')
+        .forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      state[key] = pill.dataset.val;
+      applyFilters();
+    });
+  });
+});
+
+function applyFilters() {
+  // Read dropdown values
+  state.industry = document.getElementById('f-industry').value;
+  state.yoy      = document.getElementById('f-yoy').value;
+  state.inst     = document.getElementById('f-inst').value;
+
+  // Style active dropdowns
+  ['industry','yoy','inst'].forEach(k => {
+    const el = document.getElementById('f-' + k);
+    el.classList.toggle('active', el.value !== 'all');
+  });
+
+  const rows = document.querySelectorAll('#screener-body tr');
+  let visible = 0;
+
+  rows.forEach(row => {
+    const show =
+      (state.country  === 'all' || row.dataset.country  === state.country)  &&
+      (state.cap      === 'all' || row.dataset.cap       === state.cap)      &&
+      (state.sector   === 'all' || row.dataset.sector    === state.sector)   &&
+      (state.industry === 'all' || row.dataset.industry  === state.industry) &&
+      yoyMatch(parseFloat(row.dataset.yoy), state.yoy)                       &&
+      instMatch(parseInt(row.dataset.inst),  state.inst);
+
+    row.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+
+  document.getElementById('visible-count').textContent  = visible;
+  document.getElementById('result-count-header').textContent = visible + ' stock' + (visible !== 1 ? 's' : '');
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+
+  updateActiveTags();
+}
+
+function yoyMatch(val, filter) {
+  if (filter === 'all')      return true;
+  if (filter === 'positive') return val > 0;
+  if (filter === 'gt5')      return val > 5;
+  if (filter === 'gt10')     return val > 10;
+  if (filter === 'negative') return val < 0;
+  return true;
+}
+
+function instMatch(val, filter) {
+  if (filter === 'all')   return true;
+  if (filter === 'gt1')   return val >= 2;
+  if (filter === 'gt4')   return val >= 5;
+  if (filter === 'gt9')   return val >= 10;
+  if (filter === 'gt14')  return val >= 15;
+  return true;
+}
+
+function updateActiveTags() {
+  const tags = document.getElementById('active-tags');
+  tags.innerHTML = '';
+  const labels = {
+    country: { US:'🇺🇸 US', IE:'🇮🇪 Ireland', CA:'🇨🇦 Canada', UK:'🇬🇧 UK', DK:'🇩🇰 Denmark', CH:'🇨🇭 Switzerland' },
+    cap:     { large:'Large Cap', mid:'Mid Cap', small:'Small Cap' },
+    yoy:     { positive:'Revenue > 0%', gt5:'Revenue > 5%', gt10:'Revenue > 10%', negative:'Revenue < 0%' },
+    inst:    { gt1:'≥ 2 investors', gt4:'≥ 5 investors', gt9:'≥ 10 investors', gt14:'≥ 15 investors' },
+  };
+
+  const add = (key, label) => {
+    const tag = document.createElement('div');
+    tag.className = 'rb-tag';
+    tag.innerHTML = `${label} <span class="rb-tag-x" onclick="clearFilter('${key}')">×</span>`;
+    tags.appendChild(tag);
+  };
+
+  if (state.country  !== 'all') add('country',  labels.country[state.country] || state.country);
+  if (state.cap      !== 'all') add('cap',       labels.cap[state.cap] || state.cap);
+  if (state.sector   !== 'all') add('sector',    state.sector);
+  if (state.industry !== 'all') add('industry',  state.industry);
+  if (state.yoy      !== 'all') add('yoy',       labels.yoy[state.yoy]);
+  if (state.inst     !== 'all') add('inst',      labels.inst[state.inst]);
+}
+
+function clearFilter(key) {
+  state[key] = 'all';
+  if (['country','cap','sector'].includes(key)) {
+    document.getElementById('f-' + key).querySelectorAll('.pill')
+      .forEach(p => p.classList.toggle('active', p.dataset.val === 'all'));
+  } else {
+    document.getElementById('f-' + key).value = 'all';
+  }
+  applyFilters();
+}
+
+function resetAll() {
+  ['country','cap','sector'].forEach(k => {
+    state[k] = 'all';
+    document.getElementById('f-' + k).querySelectorAll('.pill')
+      .forEach(p => p.classList.toggle('active', p.dataset.val === 'all'));
+  });
+  ['industry','yoy','inst'].forEach(k => {
+    state[k] = 'all';
+    document.getElementById('f-' + k).value = 'all';
+  });
+  applyFilters();
+}
+
+// ── SORT ──
+let sortCol = null, sortDir = 1;
+function sortTable(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+
+  document.querySelectorAll('.data-table thead th').forEach(th => {
+    th.classList.remove('sort-asc','sort-desc');
+  });
+  const idx = col === 'yoy' ? 6 : col === 'inst' ? 7 : 8;
+  const th = document.querySelectorAll('.data-table thead th')[idx];
+  th.classList.add(sortDir === 1 ? 'sort-desc' : 'sort-asc');
+
+  const tbody = document.getElementById('screener-body');
+  const rows  = [...tbody.querySelectorAll('tr')];
+  rows.sort((a, b) => {
+    const av = col === 'yoy'   ? parseFloat(a.dataset.yoy)
+             : col === 'inst'  ? parseInt(a.dataset.inst)
+             : parseFloat(a.querySelector('td:last-child').textContent.replace(/[^0-9.]/g,''));
+    const bv = col === 'yoy'   ? parseFloat(b.dataset.yoy)
+             : col === 'inst'  ? parseInt(b.dataset.inst)
+             : parseFloat(b.querySelector('td:last-child').textContent.replace(/[^0-9.]/g,''));
+    return (av - bv) * sortDir;
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+</script>
+</div>
 
 <!-- ══════════════════════════════════════════════
      PAGE 9 — FEEDBACK
@@ -1893,7 +3474,7 @@ canvas { max-width: 100%; }
 
     <div class="fb-footer-strip">
       <div class="fb-footer-left">Q2 2025 · 13F Filing Analysis · Fire, Marine & Casualty Insurance · Beta Testing Phase</div>
-      <div class="fb-footer-right">Page 9 · Confidential</div>
+      <div class="fb-footer-right">Page 11 · Confidential</div>
     </div>
 
   </div><!-- /fb-wrap -->
